@@ -1,0 +1,1680 @@
+﻿@media only screen and (max-width:1700px) {
+    body {
+        background-color: white;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+    #imgbg1 {
+        position:fixed;
+        z-index: -100;
+        width: 105%;
+        height: auto;
+        opacity: 1;
+    }
+    .wrraper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #imgbg {
+        position:absolute;
+        z-index: -100;
+        width: 100%;
+        height: auto;
+        opacity: 0;
+
+    }
+
+    #logo {
+        width: 80px;
+        margin-left: 8%;
+        margin-top: 2%;
+        height: auto;
+        position: relative;
+    }
+    #logologo {
+        display:none;
+    }
+    .icon {
+        height: auto;
+        width: 40px;
+        padding: 0px 10px;
+        position: relative;
+        float: right;
+        top: 25px;
+        right: 110px;
+        display:inline-block;
+    }   
+    .auto-style1 {
+        width: 300px;
+        height: 329px;
+    }
+    .auto-style2 {
+        width: 200px;
+    }
+    #vyggo {
+        font-family: Ubuntu;
+        font-weight: 700;
+        font-size: 20px;
+        margin-left: 8.7%;
+        padding-bottom: 30px;
+        margin-top: 0%;
+        position: absolute;
+        color: #ed610c;
+    }
+    #amazing {
+        transition-duration: 5s;
+    }
+    h1 {
+        transition-duration: 5s;
+
+    }
+    #gameamazing {
+        margin-top: -13%;
+        display:none;
+        transition-duration: 5s;
+}
+     #pink {
+        position:absolute;
+        margin-top: 50%;
+    }
+     #blue:hover {
+         background-color: #ed610c;
+         color: white;
+         transition-duration: 1s;
+
+     }
+     #blue {
+         position: absolute;
+         margin-top: 40%;
+         float:left;
+     }
+    input {
+        background:none;
+        color:black;
+        border: 2px solid white;
+        font-family: Ubuntu;
+        font-weight: 600;
+        padding: 5px 10px;
+    }
+    .text2 {
+        font-family: Ubuntu;
+        margin-top: 3%;
+        position: absolute;
+        margin-left: 8%;
+        color: white;
+        font-weight: 500;
+        font-size: 40px;
+    }
+    h1 {
+        font-weight: 600;
+        font-size: 40px;
+
+    }
+    h3 {
+        margin-top: 5%;
+        font-size: 30px;
+        font-weight:500;
+    }
+    #subscribe1 {
+        background-color:#ed610c;
+        opacity: 0.9;
+        left: -2%;
+        position: absolute;
+        top: 0px;
+        width: 105%;
+        font-family: Ubuntu;
+        height: 650px;
+        text-align: left;
+        font-weight: 600;
+        color: white;
+        z-index: -5;
+        margin-top: 9%;
+        transition-duration: 2s;
+      
+    }
+    input:-moz-placeholder {
+        color: green;
+    }
+    #subscribe {
+        margin-top: 5%;
+        float: right;
+        margin-right: 6%;
+        position: relative;
+        width: 300px;
+        font-family: Ubuntu;
+        height: 269px;
+        text-align: left;
+        font-weight: 500;
+    }
+        #newsletters {
+        color: white;
+        float:right;
+        margin-right: 20%;
+        margin-bottom: 4%;
+    }
+    #text4 {
+        font-size: 20px;
+        font-family: Ubuntu;
+    }
+    label {
+        color: white;
+        margin-left: 20px;
+    }
+    #Label1 {
+        font-family: Ubuntu;
+        font-size: 15pt;
+        font-weight: 600;
+        text-align: center;
+        left: 100px;
+        position: relative;
+        top: 20px;
+        color: white;
+    }
+    #logo22 {
+        display:none;
+    }
+    #Check {
+        width: 15px;
+        height: auto;
+        color: white;
+        position: absolute;
+        padding-right: 20px;
+        margin-top:1.7%;
+    }
+    #txtfname, #txtinterest, #txtlname, #txtemail {
+        border: 1px solid #456879;
+        border-radius: 5px;
+        background-color: lightgoldenrodyellow;
+        font-family: Ubuntu;
+        padding-left: 5px;
+        width: 243px;
+    }
+    #txtfname, #txtinterest, #txtlname, #txtemail::-webkit-input-placeholder ::-moz-placeholder {
+            color: orange;
+        }
+    #Button1 {
+        padding: 0px 20px;
+        color: white;
+        font-family: Ubuntu;
+        font-weight: 500;
+        border: 2px solid white;
+        font-size: 12pt;
+        
+      
+    }
+
+    #Button1:hover {
+            border: solid 2px white;
+            color: #ed610c;
+            background-color: white;
+            transition-duration: 1s;
+        }
+    #text {
+        font-family: Ubuntu;
+        margin-top: 36%;
+        margin-left: 8%;
+        color:  white;
+        font-weight: 500;
+        font-size: 25px;
+    }
+    #arrowtxt {
+        font-family: Ubuntu;
+        color: #ed610c;
+        font-size: 10pt;
+        position: absolute;
+        margin-top: -20px;
+        width: 20%;
+        margin-right: 200px;
+    }
+    #arrow {
+        position: absolute;
+        width: 3%;
+        height: auto;
+        animation-name:hoverIn;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        left: 7%;
+        top: 95%;
+    }
+    @keyframes hoverIn {
+
+        0% {
+            margin-left: 60%;
+            margin-top: -2%;
+        }
+
+        50% {
+            margin-left: 60%;
+            margin-top: -4%;
+        }
+
+        100% {
+            margin-left: 60%;
+            margin-top: -2%;
+        }
+    }
+    #anchor {
+        position: absolute;
+        padding-top: 100px;
+        margin-top: 8%;
+    }
+    #rooms {
+       
+        display: block;
+        margin-top: 15%;
+        margin-left: 8%;
+        z-index: 20;
+    }
+
+   #chat2 {
+       padding-bottom: 0.9%;
+       transition-duration:1s;
+    }
+   #chat2:hover {
+    transition-duration: 1s;
+   }
+   #chat2:hover ul li{
+       display:block;
+       transition-duration: 1s;
+       transition-delay: 0.1s
+   }
+       
+   
+    h2 {
+       font-size: 25px;
+       font-weight: 600;
+       margin-bottom: 3%;
+    }
+    h6 {
+        font-size: 12px;
+        font-weight: 500;
+    } 
+    .chat {
+        float: left;
+        margin-right: 2.4%;
+        border: solid 3px white;
+        color: white;
+        text-align: center;
+        font-family: Ubuntu;
+        padding: 2% 3%;
+        z-index: 20;
+        transition-duration: 1s;
+    }
+#chat2 ul li {
+        list-style-type: none;
+        font-family: Ubuntu;
+        margin:20px 0px;
+        display:none;
+        transition-duration:1s
+    }
+
+    .chat:hover {
+            border: solid 3px white;
+            color: #ed610c;
+            background-color: white;
+        }
+    #line0 {
+        margin-top: 220px;
+        font-family: Ubuntu;
+        position: absolute;
+        color: white;
+        font-size: 17px;
+        margin-left: 8%;
+    }
+    #line1 {
+        font-weight: 500;
+        margin-bottom: 2%;
+       
+    }
+    #hoverme {
+        margin-top: 160px;
+        margin-left: 80px;
+        position:absolute;
+        font-family: Ubuntu;
+        color: #33CC33;
+    }
+    #vyggo2 {
+        position:absolute;
+        margin-top: 110px;
+        margin-left: 65px;
+        font-weight:500;
+        position:absolute;
+        font-family: Ubuntu;
+        color: #33CC33;
+    }
+    #wordpress {
+        width: 60px;
+        height:auto;
+        position:absolute;
+        margin-top: -90px;
+        margin-left: 80px; 
+       
+    }
+    #wordlink {
+        color: white;
+        font-family: Ubuntu;
+        font-weight:500;
+        text-decoration:none;
+        position:absolute;
+        font-size: 14px;
+        margin-top: 330px;
+        margin-left: 980px;
+    }       
+    #logotxt {
+        display: block;
+        opacity: 0;
+        transition-duration: 1s;
+        margin-top: 50px;
+        width: 500px;
+        margin-left: 250px;
+        font-family: Ubuntu;  
+        color: #33CC33;    
+    }
+    #logo2:hover #logotxt {
+        display:block;
+        opacity:1;
+         transition-duration: 1s;
+           transition-delay: 1s;
+    }
+    #logo2:hover {
+        width: 700px;
+        transition-duration: 1s;
+    }
+    #logo2 {
+        background-color: white;
+        width: 227px;
+        height: 200px;
+        position:absolute;
+        margin-top: 18%;
+        margin-left: 8%;
+         transition-duration: 1s;
+      
+    }
+    #logo3 {
+        display:block;
+        width: 100px;
+        height:auto;
+        margin-top: 30px;
+        float: left;
+        margin-right: 0%;
+        margin-left: 60px;
+               
+    }
+ 
+    #logo1 {
+        width: 100px;
+        height:auto;
+        margin-top: 30px;
+        float: left;
+        margin-right: 0%;
+        margin-left: 60px;
+    }
+    #line2 {
+        margin-left: 8%;
+        margin-top: 580px;
+        font-family: Ubuntu;
+        position: absolute;
+        color: white;
+        font-size: 17px;
+        font-weight: 500;
+    }
+    #content3 {
+        background-color: #ed610c;
+        height: 450px;
+        width: 100%;
+        position: absolute;
+        margin-top: 40%;
+        opacity: 0.9;
+        z-index: -20;
+
+    }
+    @keyframes hoverout {
+
+        0% {
+            margin-top: 4%;
+        }
+
+        50% {
+            margin-top: 2%;
+        }
+
+        100% {
+            margin-top: 4%;
+        }
+    }
+    #anchor2 {
+        position: absolute;
+        padding-top: 100px;
+        margin-top: 10%;
+    }
+    #kenneths_maddness {
+        width: 1104px;
+        height: auto;
+        margin-top: 450px;
+        margin-left: 8%;
+    }
+   #content2 {
+        background-color: #ed610c;
+        height: 494px;
+        width: 100%;
+        position: absolute;
+        margin-left: 8%;
+        margin-top: 40%;
+        opacity: 0.9;
+        transition-duration: 2s;
+    }
+   #footer li {
+    display:inline;
+    font-weight:600;
+    margin-left: 10%;
+    margin-right:10%;
+    color: #ed610c;
+    text-decoration:none !important;
+}
+
+#footer li a {
+    color: #ed610c;
+    text-decoration:none !important;
+    text-decoration-line:none;
+}
+#footer li a:hover {
+    color: blue;
+}
+#footer {
+    margin-left:0%;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    margin-top: 84px;
+    margin-bottom: 0;
+    width: 100%;
+    font-family:Ubuntu;
+    list-style-type:none;
+    color:white;
+    z-index: 50;
+    position:absolute;
+    border-top: 2px solid white;
+    background-color: white;
+}
+}
+@media only screen and (min-width:1901px) {
+     body {
+        background-color: white;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+     #imgbg1 {
+        position:fixed;
+        z-index: -100;
+        width: 105%;
+        height:auto;
+        transition-duration: 1s;
+ }
+     #imgbg {
+        opacity: 0;
+        display: none;
+        transition-duration: 1s;
+}
+    .wrraper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #logo {
+        width: 120px;
+        margin-left: 8%;
+        margin-top: 2%;
+        height: auto;
+        position: relative;
+    }
+    #logologo {
+        display:none;
+    }
+    .icon {
+        height: auto;
+        width: 80px;
+        padding: 0px 10px;
+        position: relative;
+        float: right;
+        top: 50px;
+        right: 8%;
+        display: inline-block;
+    }   
+    .auto-style1 {
+        width: 300px;
+        height: 329px;
+    }
+    .auto-style2 {
+        width: 200px;
+    }
+    #vyggo {
+        font-family: Ubuntu;
+        font-weight: 700;
+        font-size: 30px;
+        margin-left: 8.9%;
+        padding-bottom: 30px;
+        margin-top: 0%;
+        position: absolute;
+        color: #ed610c;
+    }
+    #amazing {
+        transition-duration: 5s;
+    }
+    h1 {
+        transition-duration: 5s;
+
+    }
+    #gameamazing {
+        margin-top: -13%;
+        display:none;
+        transition-duration: 5s;
+}
+   
+    input {
+        background:none;
+        color:white;
+        font-size: 23px;
+        border: 2px solid white;
+        font-family: Ubuntu;
+        font-weight: 600;
+        padding: 10px 30px;
+        margin-bottom:4%;
+    }
+    .text2 {
+        font-family: Ubuntu;
+        margin-top: 3%;
+        position: absolute;
+        margin-left: 8%;
+        color: white;
+        font-weight: 500;
+        font-size: 40px;
+    }
+    h1 {
+        font-weight: 600;
+        font-size: 50px;
+
+    }
+    h3 {
+        margin-top: 5%;
+        font-size: 40px;
+        font-weight:500;
+    }
+    #subscribe1 {
+        background-color:#ed610c;
+        opacity: 0.9;
+        left: -2%;
+        position: absolute;
+        top: 0px;
+        width: 105%;
+        font-family: Ubuntu;
+        height: 900px;
+        text-align: left;
+        font-weight: 600;
+        color: white;
+        z-index: -5;
+        margin-top: 10%;
+        transition-duration: 2s;
+      
+    }
+    input:-moz-placeholder {
+        color: green;
+    }
+    #subscribe {
+        margin-top: 5%;
+        float: right;
+        margin-right: 6.2%;
+        position: relative;
+        width: 400px;
+        font-family: Ubuntu;
+        height: 269px;
+        text-align: left;
+        font-weight: 500;
+    }
+        #newsletters {
+        color: white;
+        float:left;
+        font-size: 23px;
+        
+        margin-bottom: 4%;
+    }
+    #text4 {
+        font-size: 30px;
+        font-family: Ubuntu;
+    }
+    label {
+        color: white;
+        margin-left: 40px;
+
+        font-size: 20px;
+        font-weight: 400;
+    }
+    #Label1 {
+        font-family: Ubuntu;
+        font-size: 23pt;
+        font-weight: 600;
+        text-align: center;
+        left: 0px;
+        position: relative;
+        top: 20px;
+        color: white;
+    }
+    #Check {
+        width: 20px;
+        height: 20px;
+        color: white;
+        position: absolute;
+        padding-right: 40px;
+        margin-top:0.5%;
+        margin-right: 20px;
+    }
+    #txtfname, #txtinterest, #txtlname, #txtemail {
+        border: 1px solid #456879;
+        border-radius: 5px;
+        background-color: lightgoldenrodyellow;
+        font-family: Ubuntu;
+        padding-left: 10px;
+        width: 300px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #txtfname, #txtinterest, #txtlname, #txtemail::-webkit-input-placeholder ::-moz-placeholder {
+            color: orange;
+        }
+    #Button1 {
+        margin-top: 20px;
+        padding: 5px 25px;
+        color: white;
+        font-family: Ubuntu;
+        font-weight: 500;
+        border: 2px solid white;
+
+        font-size: 16pt;
+        width: 150px;
+
+    }
+    #Button1:hover {
+            border: solid 2px white;
+            color: #ed610c;
+            background-color: white;
+            transition-duration: 1s;
+        }
+    #text {
+        font-family: Ubuntu;
+        margin-top: 36%;
+        margin-left: 9%;
+        color:  white;
+        font-weight: 500;
+        font-size: 20px;
+    }
+    #arrowtxt {
+        font-family: Ubuntu;
+        color: #ed610c;
+        font-size: 10pt;
+        position: absolute;
+        margin-top: -20px;
+        width: 20%;
+        margin-right: 200px;
+    }
+    #arrow {
+        position: absolute;
+        width: 3%;
+        height: auto;
+        animation-name:hoverIn;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        left: 3%;
+        top: 95%;
+    }
+    @keyframes hoverIn {
+
+        0% {
+            margin-left: 60%;
+            margin-top: -2%;
+        }
+
+        50% {
+            margin-left: 60%;
+            margin-top: -4%;
+        }
+
+        100% {
+            margin-left: 60%;
+            margin-top: -2%;
+        }
+    }
+    #anchor {
+        position: absolute;
+        padding-top: 100px;
+        margin-top: 8%;
+    }
+    #rooms {
+        display: block;
+        margin-top: 15%;
+        margin-left: 8%;
+        z-index: 20;
+    }
+
+   #chat2 {
+       padding-bottom: 0.8%;
+       transition-duration:1s;
+    }
+   #chat2:hover {
+    transition-duration: 1s;
+   }
+   #chat2:hover ul li{
+       display:block;
+       transition-duration: 1s;
+       transition-delay: 0.1s
+   }
+       
+   
+    h2 {
+       font-size: 25px;
+       font-weight: 600;
+       margin-bottom: 3%;
+    }
+    h6 {
+        font-size: 17px;
+        font-weight: 500;
+    } 
+    .chat {
+        float: left;
+        margin-right: 2.4%;
+        border: solid 3px white;
+        color: white;
+        text-align: center;
+        font-family: Ubuntu;
+        padding: 2% 4%;
+        z-index: 20;
+        transition-duration: 1s;
+    }
+#chat2 ul li {
+        list-style-type: none;
+        font-family: Ubuntu;
+        margin:20px 0px;
+        display:none;
+        transition-duration:1s
+    }
+
+    .chat:hover {
+            border: solid 3px white;
+            color: #ed610c;
+            background-color: white;
+        }
+    #line0 {
+        margin-top: 220px;
+        font-family: Ubuntu;
+        position: absolute;
+        color: white;
+        font-size: 17px;
+        margin-left: 8%;
+    }
+    #line1 {
+        font-weight: 500;
+        margin-bottom: 2%;
+       
+    }
+    #hoverme {
+        margin-top: 220px;
+        margin-left: 120px;
+        font-size: 25px;
+        position:absolute;
+        font-family: Ubuntu;
+        color: #33CC33;
+    }
+    #vyggo2 {
+        position:absolute;
+        margin-top: 160px;
+        margin-left: 90px;
+        font-weight:500;
+        font-size: 25px;
+        position:absolute;
+        font-family: Ubuntu;
+        color: #33CC33;
+    }
+    #wordpress {
+        width: auto;
+        height:120px;
+        position:relative;
+        left:220px;
+        margin-bottom:1%;
+        top: -30px;
+        
+    }
+    #wordlink {
+        color: white;
+        font-family: Ubuntu;
+        font-weight:500;
+        text-decoration:none;
+        position:relative;
+        top: 250px;
+        font-size: 20px;
+    }       
+    #logotxt {
+        display: block;
+        opacity: 0;
+        transition-duration: 1s;
+        margin-top: 90px;
+        width: 500px;
+        margin-left: 350px;
+        font-family: Ubuntu;  
+        color: #33CC33;
+        font-size: 21px;    
+    }
+    #logo2:hover #logotxt {
+        display:block;
+        opacity:1;
+         transition-duration: 1s;
+           transition-delay: 1s;
+    }
+    #logo22 {
+        display:none;
+    }
+    #logo2:hover {
+        width: 900px;
+        transition-duration: 1s;
+    }
+    #logo2 {
+        background-color: white;
+        width: 350px;
+        height: 300px;
+        position:absolute;
+        margin-top: 15%;
+        margin-left: 8%;
+        transition-duration: 1s;
+      
+    }
+    #logo3 {
+        display:block;
+        width: 180px;
+        height:auto;
+        margin-top: 30px;
+        float: left;
+        margin-right: 0%;
+        margin-left: 90px;
+               
+    }
+    
+    #logo1 {
+        width: 100px;
+        height:auto;
+        margin-top: 30px;
+        float: left;
+        margin-right: 0%;
+        margin-left: 60px;
+    }
+    #line2 {
+        margin-left: 8%;
+        margin-top: 650px;
+        font-family: Ubuntu;
+        position: absolute;
+        color: white;
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    #content3 {
+        background-color: #ed610c;
+        height: 700px;
+        transition-duration: 1s;
+        width: 105%;
+        position: absolute;
+        margin-top:28%;
+        opacity: 0.9;
+        z-index: -20;
+
+    }
+    @keyframes hoverout {
+
+        0% {
+            margin-top: 4%;
+        }
+
+        50% {
+            margin-top: 2%;
+        }
+
+        100% {
+            margin-top: 4%;
+        }
+    }
+    #anchor2 {
+        position: absolute;
+        padding-top: 100px;
+        margin-top: 10%;
+    }
+    #kenneths_maddness {
+        width: 85%;
+        height: auto;
+        margin-top: 700px;
+        margin-left: 8%;
+    }
+
+   #footer li {
+    display:inline;
+    font-weight:600;
+    margin-left: 10%;
+    margin-right:10%;
+    color: #ed610c;
+    font-size: 25px;
+    text-decoration:none !important;
+}
+
+#footer li a {
+    color: #ed610c;
+    text-decoration:none !important;
+    text-decoration-line:none;
+}
+#footer li a:hover {
+    color: #33CC33;
+}
+#footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    font-family:Ubuntu;
+    list-style-type:none;
+    color:white;
+    z-index: 50;
+    position:absolute;
+    border-top: 2px solid white;
+    margin-top: 114px;
+    margin-bottom: 0px;
+    background-color: white;
+}
+}
+@media only screen and (max-width:1900px)
+                   and (min-width:1701px) { 
+     body {
+        background-color: white;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+#imgbg1 {
+     position:fixed;
+     z-index: -100;
+     width: 105%;
+     height:auto;
+     transition-duration: 1s;
+ }
+#imgbg {
+    opacity: 0;
+    display: none;
+    transition-duration: 1s;
+}
+    .wrraper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #logo {
+        width: 120px;
+        margin-left: 8%;
+        margin-top: 2%;
+        height: auto;
+        position: relative;
+    }
+    #logologo {
+        display:none;
+    }
+    .icon {
+        height: auto;
+        width: 60px;
+        padding: 0px 10px;
+        position: relative;
+        float: right;
+        top: 45px;
+        right: 8%;
+        display: inline-block;
+    }   
+    .auto-style1 {
+        width: 300px;
+        height: 329px;
+    }
+    .auto-style2 {
+        width: 200px;
+    }
+    #vyggo {
+        font-family: Ubuntu;
+        font-weight: 700;
+        font-size: 30px;
+        margin-left: 8.9%;
+        padding-bottom: 30px;
+        margin-top: 0%;
+        position: absolute;
+        color: #ed610c;
+    }
+    #amazing {
+        transition-duration: 5s;
+    }
+    h1 {
+        transition-duration: 5s;
+
+    }
+    #gameamazing {
+        margin-top: -13%;
+        display:none;
+        transition-duration: 5s;
+}
+
+    input {
+  
+        color:white;
+        font-size: 20px;
+        border: 2px solid white;
+    
+        font-family: Ubuntu;
+        font-weight: 600;
+        padding: 5px 30px;
+        margin-bottom:4%;
+    }
+    .text2 {
+        font-family: Ubuntu;
+        margin-top: 3%;
+        position: absolute;
+        margin-left: 8%;
+        color: white;
+        font-weight: 500;
+        font-size: 40px;
+    }
+    h1 {
+        font-weight: 600;
+        font-size: 50px;
+
+    }
+    h3 {
+        margin-top: 5%;
+        font-size: 40px;
+        font-weight:500;
+    }
+    #subscribe1 {
+        background-color:#ed610c;
+        opacity: 0.9;
+        left: -2%;
+        position: absolute;
+        top: 0px;
+        width: 105%;
+        font-family: Ubuntu;
+        height: 900px;
+        text-align: left;
+        font-weight: 600;
+        color: white;
+        z-index: -5;
+        margin-top: 10%;
+        transition-duration: 2s;
+      
+    }
+    input:-moz-placeholder {
+        color: green;
+    }
+    #subscribe {
+        margin-top: 8%;
+        float: right;
+        margin-right: 8%;
+        position: relative;
+        width: 300px;
+        font-family: Ubuntu;
+        height: 269px;
+        text-align: left;
+        font-weight: 500;
+    }
+        #newsletters {
+        color: white;
+        float:left;
+        font-size: 20px;
+        
+        margin-bottom: 7%;
+    }
+    #text4 {
+        font-size: 30px;
+        font-family: Ubuntu;
+    }
+    label {
+        position:absolute;
+        color: white;
+        margin-left: 30px;
+        font-size: 18px;
+        margin-top: 3%;
+    }
+    #Label1 {
+        font-family: Ubuntu;
+        font-size: 15pt;
+        font-weight: 600;
+        text-align: center;
+        left: 0px;
+        position: relative;
+        top: 20px;
+        color: white;
+    }
+    #Check {
+        width: 20px;
+        height: 20px;
+        color: white;
+        position: absolute;
+        padding-right: 40px;
+        margin-top:4%;
+        margin-right: 20px;
+    }
+    #txtfname, #txtinterest, #txtlname, #txtemail {
+        border: 1px solid #456879;
+        border-radius: 5px;
+        background-color: lightgoldenrodyellow;
+        font-family: Ubuntu;
+        padding-left: 10px;
+        width: 243px;
+    }
+    #txtfname, #txtinterest, #txtlname, #txtemail::-webkit-input-placeholder ::-moz-placeholder {
+            color: orange;
+        }
+    #Button1 {
+        margin-top: 50px;
+        padding: 0px 25px;
+        color: white;
+        font-family: Ubuntu;
+        font-weight: 500;
+        border: 2px solid white;
+        font-size: 16pt;
+        width: 150px;
+        background:none;
+    }
+    #Button1:hover {
+            border: solid 2px white;
+            color: #ed610c;
+            background-color: white;
+            transition-duration: 1s;
+        }
+    #text {
+        font-family: Ubuntu;
+        margin-top: 36%;
+        margin-left: 9%;
+        color:  white;
+        font-weight: 500;
+        font-size: 20px;
+    }
+    #arrowtxt {
+        font-family: Ubuntu;
+        color: #ed610c;
+        font-size: 10pt;
+        position: absolute;
+        margin-top: -20px;
+        width: 20%;
+        margin-right: 200px;
+    }
+    #arrow {
+        position: absolute;
+        width: 3%;
+        height: auto;
+        animation-name:hoverIn;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        left: 9%;
+        top: 95%;
+    }
+    @keyframes hoverIn {
+
+        0% {
+            margin-left: 60%;
+            margin-top: -2%;
+        }
+
+        50% {
+            margin-left: 60%;
+            margin-top: -4%;
+        }
+
+        100% {
+            margin-left: 60%;
+            margin-top: -2%;
+        }
+    }
+    #anchor {
+        position: absolute;
+        padding-top: 100px;
+        margin-top: 8%;
+    }
+    #rooms {
+        display: block;
+        margin-top: 15%;
+        margin-left: 8%;
+        z-index: 20;
+    }
+
+   #chat2 {
+       padding-bottom: 0.8%;
+       transition-duration:1s;
+    }
+   #chat2:hover {
+    transition-duration: 1s;
+   }
+   #chat2:hover ul li{
+       display:block;
+       transition-duration: 1s;
+       transition-delay: 0.1s
+   }
+       
+   
+    h2 {
+       font-size: 25px;
+       font-weight: 600;
+       margin-bottom: 3%;
+    }
+    h6 {
+        font-size: 16px;
+        font-weight: 500;
+    } 
+    .chat {
+        float: left;
+        margin-right: 2.4%;
+        border: solid 3px white;
+        color: white;
+        text-align: center;
+        font-family: Ubuntu;
+        padding: 2% 3.5%;
+        z-index: 20;
+        transition-duration: 1s;
+    }
+#chat2 ul li {
+        list-style-type: none;
+        font-family: Ubuntu;
+        margin:20px 0px;
+        display:none;
+        transition-duration:1s
+    }
+
+    .chat:hover {
+            border: solid 3px white;
+            color: #ed610c;
+            background-color: white;
+        }
+    #line0 {
+        margin-top: 220px;
+        font-family: Ubuntu;
+        position: absolute;
+        color: white;
+        font-size: 17px;
+        margin-left: 8%;
+    }
+    #line1 {
+        font-weight: 500;
+        margin-bottom: 2%;
+       
+    }
+    #hoverme {
+        margin-top: 220px;
+        margin-left: 120px;
+        font-size: 25px;
+        position:absolute;
+        font-family: Ubuntu;
+        color: #33CC33;
+    }
+    #vyggo2 {
+        position:absolute;
+        margin-top: 160px;
+        margin-left: 90px;
+        font-weight:500;
+        font-size: 25px;
+        position:absolute;
+        font-family: Ubuntu;
+        color: #33CC33;
+    }
+    #wordpress {
+        width: auto;
+        height:60px;
+        position:absolute;
+        margin-left:100px;
+        margin-top: -100px;
+    }
+    #wordlink {
+        color: white;
+        font-family: Ubuntu;
+        font-weight:500;
+        text-decoration:none;
+        position:absolute;
+        margin-top: 450px;
+        margin-left: 130px;
+
+        font-size: 17px;
+    }       
+    #logotxt {
+        display: block;
+        opacity: 0;
+        transition-duration: 1s;
+        margin-top: 90px;
+        width: 500px;
+        margin-left: 350px;
+        font-family: Ubuntu;  
+        color: #33CC33;
+        font-size: 21px;    
+    }
+    #logo2:hover #logotxt {
+        display:block;
+        opacity:1;
+         transition-duration: 1s;
+           transition-delay: 1s;
+    }
+    #logo22 {
+        display:none;
+    }
+    #logo2:hover {
+        width: 900px;
+        transition-duration: 1s;
+    }
+    #logo2 {
+        background-color: white;
+        width: 350px;
+        height: 320px;
+        position:absolute;
+        margin-left: 8%;
+        margin-top: 15%;
+         transition-duration: 1s;
+      
+    }
+    #logo3 {
+        display:block;
+        width: 180px;
+        height:auto;
+        margin-top: 30px;
+        float: left;
+        margin-right: 0%;
+        margin-left: 90px;
+               
+    }
+    
+    #logo1 {
+        width: 100px;
+        height:auto;
+        margin-top: 30px;
+        float: left;
+        margin-right: 0%;
+        margin-left: 60px;
+    }
+    #line2 {
+        margin-left: 8%;
+        margin-top: 850px;
+        font-family: Ubuntu;
+        position: absolute;
+        color: white;
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    #content3 {
+        background-color: #ed610c;
+        height: 700px;
+        transition-duration: 1s;
+        width: 100%;
+        position: absolute;
+        margin-top: 42%;
+        opacity: 0.9;
+        z-index: -20;
+    }
+    @keyframes hoverout {
+
+        0% {
+            margin-top: 4%;
+        }
+
+        50% {
+            margin-top: 2%;
+        }
+
+        100% {
+            margin-top: 4%;
+        }
+    }
+    #anchor2 {
+        position: absolute;
+        padding-top: 100px;
+        margin-top: 10%;
+    }
+    #kenneths_maddness {
+        width: 85%;
+        height: auto;
+        margin-left: 8%;
+        margin-top: 700px;
+    }
+   #content2 {
+        background-color: #ed610c;
+        height: 560px;
+        width: 100%;
+        position: absolute;
+        margin-left:-2%;
+        margin-top: 40%;
+        opacity: 0.0;
+        transition-duration: 2s;
+    }
+   #footer li {
+    
+    display:inline;
+    font-weight:600;
+    margin-left: 8%;
+    margin-right:8%;
+    color: #ed610c;
+    font-size: 25px;
+    text-decoration:none !important;
+}
+
+#footer li a {
+    color: #ed610c;
+    text-decoration:none !important;
+    text-decoration-line:none;
+}
+#footer li a:hover {
+    color: blue;
+}
+footer ul {
+    margin-left:auto;
+    margin-right:auto;
+
+}
+#footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    font-family:Ubuntu;
+    list-style-type:none;
+    color:white;
+    z-index: 50;
+    position:absolute;
+    border-top: 2px solid white;
+    margin-top: 153px;
+    background-color: white;
+    margin-bottom: 0px;
+}
+}
+@media only screen and (max-width:1800px)
+                   and (min-width:1700px) {
+ .chat {
+        float: left;
+        margin-right: 2.4%;
+        border: solid 3px white;
+        color: white;
+        text-align: center;
+        font-family: Ubuntu;
+        padding: 2% 2%;
+        z-index: 20;
+        transition-duration: 1s;
+    }
+#imgbg1 {
+     position:fixed;
+     z-index: -100;
+     width: 105%;
+     height:auto;
+     transition-duration: 1s;
+ }
+#imgbg {
+    opacity: 0;
+    display: none;
+    transition-duration: 1s;
+}
+ #subscribe {
+        margin-top: 12.5%;
+        float: right;
+        margin-right: 6%;
+        position: relative;
+        width: 400px;
+        font-family: Ubuntu;
+        height: 269px;
+        text-align: left;
+        font-weight: 500;
+    }
+}
+@media only screen and (max-width:1700px)
+                   and (min-width:1450px) {
+#wordlink {
+  position:static;
+  float:right;
+  margin-top: 150px;
+  margin-right: 135px;
+  
+}
+#subscribe1 {
+    height: 690px;
+}
+ #line2 {
+     margin-top: 650px;
+    
+ }
+ #kenneths_maddness {
+     margin-top: 350px;
+ }
+
+ #footer {
+     margin-top: 74px;
+ }
+ #footer  li  {
+     margin-right: 8%;
+     margin-left: 8%;
+ }
+ #imgbg {
+     position:absolute;
+     display:none;
+     opacity: 0;
+ }
+}
+@media only screen and (max-width:1280px) {
+    .icon {
+        right: 6%;
+        width: 35px;
+        height: auto;
+        transition-duration: 0.5s;
+    }
+    #logo {
+        width: 60px;
+        margin-left:6%;
+        margin-top: 1%;
+    }
+    #vyggo {
+        font-size: 15px;
+        margin-left: 7%;
+    }
+    input {
+        padding:4px 0px;
+    }
+    .text2 {
+        margin-top: 4%;
+        margin-left: 6%;
+        font-size: 30px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h3 {
+        margin-top: 4%;
+        font-size: 25px;
+    }
+    #subscribe1 {
+        height: 750px;
+    }
+    #subscribe {
+        margin-top: 415px;
+        margin-left: 62.2%;
+        position:absolute;
+    }
+    #arrow {
+        display:none;
+    }
+    #newsletters {
+        margin-left: 5px;
+        margin-right: 0px;
+        float:left;
+    }
+    #text4 {
+        font-size:20px;
+    }
+    #rooms {
+        width: 80%;
+        height: 160px;
+        text-align:center;
+        margin-top: 17%;
+        margin-left: 6%;
+    }
+    #chat1 {
+    }
+    #chat3 {
+    }
+    #chat2 {
+        padding-bottom: 0.3%
+    }
+    h2 {
+        font-size: 25px;
+        font-weight: 500;
+        margin-bottom: 6%;
+    }
+    h6 {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .chat {
+
+
+        margin-left:2%;
+        padding: 2% 4.6%;
+    }
+    #logotxt {
+        margin-left:200px;
+    }
+    #logo2:hover {
+        width: 610px;
+    }
+    #logo2 {
+        margin-top: 20%;
+        margin-left: 6%;
+    }
+    #wordpress {
+        top: 85px;
+        left: 280px;
+        width: 35px;
+        height:auto;
+    }
+    #wordlink {
+        font-size: 20px;
+        margin-left: 200px;
+        margin-top: 500px;
+    }
+    #line2 {
+        margin-top: 700px;
+        margin-left: 6%;
+    }
+    #content3 {
+        margin-top: 650px;
+        
+    }
+    #kenneths_maddness {
+        margin-top: 550px;
+        margin-left: 6%;
+        width: 87%;
+    }
+    #footer li {
+        margin-left:9%;
+        margin-right:9%;
+    }
+    #footer {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width:1024px){
+
+}      
