@@ -1,6 +1,6 @@
-
+﻿                                    /*Background*/
     body {
-        background-color:white;
+        background-color:black;
         margin: 0px;
         padding: 0px;
         overflow-x: hidden;
@@ -10,8 +10,8 @@
         z-index: -100;
         width: 100%;
         height: auto;
-        opacity: 1;
-        transition-duration:1s;
+        opacity: 0;
+
     }
     .wrapper {
         margin: 0 auto;
@@ -21,21 +21,18 @@
     #imgbg {
         position:fixed;
         z-index: -100;
-        width: 170%;
-        height: auto;
-        opacity: 0;
-        transition-duration:1s;    
-    }                                  
+        width: 100%;
+        height: 170%;
+        opacity: 1;
+    }
+                                    /*Background*/
+                                    /*header*/
     #logo {
-        width: 80%;
-        height: auto;
-        margin: 10% auto;
-        position: relative;
-        display:block;
+        
+        display:none;
     }
     header {
         margin:0 auto;
-
         width:100%;
         float:left;
         height: 100%; 
@@ -43,15 +40,18 @@
     
     }
     #logologo {
-        display:none;
+        width: 80%;
+        height: auto;
+        margin: 10% auto;
+        position: relative;
+        display:block;
+
     }
     #icons {
         width:92%;
         height: 100%;
         position:relative;
         float:left;
-    }
-    #iconsgreen {
         display:none;
     }
     .icon {
@@ -60,13 +60,27 @@
         width: 3.5%;
         padding-right: 2.5%;
         float: right;
+        display:none;
+    } 
+    #iconsgreen{
+         width:92%;
+        height: 100%;
+        position:relative;
+        float:left;
+    }  
+    .icongreen {
+        margin-top: 2%;
+        height: auto;
+        width: 3.5%;
+        padding-right: 2.5%;
+        float: right;
         display:inline-block;
-    }   
+    }
     #vyggo {
         font-family: Ubuntu;
         font-weight: 700;
         font-size: 1.3vw;
-        color: #ed610c;
+        color: #33cc33;
         text-align:center;
         margin-bottom:5%;
     }
@@ -75,6 +89,8 @@
         height:auto;
         float:left;
     }
+                                    /*header*/
+                                    /*container1*/
     #container1 {
         width: 70%;
         height: 80%;
@@ -82,7 +98,7 @@
         float:left;
     }
      #subscribe1 {
-        background-color:#ed610c;
+        background-color:black;
         opacity: 0.9;
         margin-left:0;
         margin-right:0;
@@ -96,25 +112,23 @@
         margin-top: 8%;
         transition-duration: 2s;
       
-    }                                   
-    #amazing {
-        transition-duration: 0.2s;
     }
-    h1 {
-        transition-duration: 1s;
-
+                                     /*text 1*/
+    #amazing {
+        transition-duration: 0s;
+        visibility:hidden;
     }
     #gameamazing {
         margin-top: -13%;
-        display:none;
-        transition-duration: 0.2s;
+        transition-duration: 0.3s;
+        font-size: 4vw;
 }
     .text2 {
         float:left;
         margin-top: 1%;
         font-family: Ubuntu;
         position: relative;
-        color: white;
+        color: #33cc33;
         font-weight: 500;
         font-size: 1.8vw;
     }
@@ -127,18 +141,40 @@
         font-size: 1.6vw;
         font-family: Ubuntu;
     }
+                                          /*text 1*/
+                                          /*subscription*/
     input {
         background:none;
-        color:black;
+        color: #33cc33;
         font-size: 1vw;
-        border: 1px solid white;
+        border: 1px solid #33cc33;
         font-family: Ubuntu;
         font-weight: 600;
         padding: 2% 2%;
         margin: 1.8% auto;
     }
+    #txtemail:hover {
+        outline: solid black 1px;
+        transition-duration:0.3s;
+    }
+    #txtlname:hover {
+        outline: solid black 1px;
+        transition-duration:0.3s;
+    }
+    #txtfname:hover {
+        outline: solid black 1px;
+        transition-duration:0.3s;
+    }
+    #txtinterest:hover {
+        outline: solid black 1px;
+        transition-duration:0.3s;
+    }
+    #Check:hover {
+        outline: solid black 1px;
+        transition-duration:0.3s;
+    }
     input:-moz-placeholder {
-        color: gray;
+        color: #33cc33;
     }
     #subscribeinside {
         width:70%;
@@ -157,11 +193,10 @@
         font-weight: 500;
     }
     #newsletters {
-        color: white;
+        color: #33cc33;
         float:left;
         font-size: 1.2vw;
         margin-bottom:4%;
-
     }
     #Label1 {
         font-family: Ubuntu;
@@ -169,53 +204,56 @@
         font-weight: 600;
         text-align: center;
         position: relative;
-        color: white;
+        color: #33cc33;
         margin-top: 5%;
         float:left;
     }
     #Check {
-        width: 5.3%;
+        border:solid 2px green;
+        width: 5.1%;
         height: auto;
-        color: white;
+        color: #33cc33;
         float:left;
-        margin-top:4%;
         position:relative;
+        margin-top:3%;
+        outline: solid #33cc33 2px;
+
     }
     label {
-        margin-top:2%;
-        color: white;
+        margin-top: 2%;
+        color: #33cc33;
         float:left;
         width:90%;
+        margin-left: 3%;
         font-size: 1.1vw;
         position:relative;
-        margin-left:3%;
     }
     #txtfname, #txtinterest, #txtlname, #txtemail {
-        border: 1px solid #456879;
-        border-radius: 5px;
-        background-color: lightgoldenrodyellow;
+       
         font-family: Ubuntu;
         padding-left: 1.5%;
         width: 100%;
         float:left;
+        outline:solid #33cc33 1px; 
+        
     }
     #Button1 {
         padding: 1.5% 5%;
         float:left;
         margin-top: 6%;
-        color: white;
+        color: #33cc33;
         font-family: Ubuntu;
         font-weight: 500;
-        border: 2px solid white;
+        border: 2px solid #33cc33;
         font-size: 1.1vw;
     }
     #Button1:hover {
         border: solid 2px white;
-        color: #ed610c;
-        background-color: white;
+        color: white;
+
         transition-duration: 1s;
         }
-    #text {
+   /* #text {
         font-family: Ubuntu;
         margin-top: 36%;
         margin-left: 8%;
@@ -223,9 +261,8 @@
         font-weight: 500;
         font-size: 25px;
     }
-    #logo22 {
-        display:none;
-    }
+              */                                       /*subscription*/
+                                                       /*rooms*/
     #rooms {
         width:100%;
         height:100%;
@@ -234,7 +271,7 @@
         z-index: 20;
         margin-top: 5%;
     }
-    #chat2 {
+   #chat2 {
       
        transition-duration:1s;
     }
@@ -250,8 +287,8 @@
     .chat {
         float: left;
         margin-right: 2%;
-        border: solid 3px white;
-        color: white;
+        border: solid 3px #33cc33;
+        color: #33cc33;
         text-align: center;
         font-family: Ubuntu;
         width: 28%;
@@ -268,46 +305,49 @@
     }
     .chat:hover {
         border: solid 3px white;
-        color: #ed610c;
-        background-color: white;
-    }
+        color: white;
+    }                                                 /*rooms*/
+                                             /*stylesheets*/
+
+   
     #stylewrap {
-        background-color:black;
+        background-color: white;
         width: 0;
         height: 15vw;
         float:left;
         transition-duration:1s;
+        display:none;
     }
     #raper {
         margin-top: 3%;
-   
+         display:none;
         width: 90%;
         height: 15vw;
         float:left;
     } 
     #raper:hover #stylewrap {
         width:68%;
+         display:none;
     }
     #raper:hover #logotxt {
-        visibility:visible;
+        display:none;
         opacity:1;
         transition-duration:1s;
         transition-timing-function:ease-out;
     }
     #logo2 {
-
-        background-color: black;
+        display:none;
+        background-color: white;
         width: 32%;
         height: 15vw;
         float:left;
         transition-duration: 1s;
     }
     #logo3 {
-        display:block;
+        display:none;
         width: 40%;
         height:auto;
         margin: 8% auto;
-
     }
     #hoverme {
         font-size: 1.3vw;
@@ -315,6 +355,7 @@
         color: #33CC33;
         text-align:center;
         margin-top: 8%;
+        display:none;
     }
     #vyggo2 {
         font-size: 1.4vw;
@@ -323,40 +364,41 @@
         color: #33CC33;
         text-align:center;
         margin-top: 13%;
+        display:none;
     }
     #logotxt {
         font-size: 1.3vw;
         margin: 7% 0%;
         position:absolute;
         opacity: 0;
-        visibility:hidden;
         transition-timing-function:ease-out;
         transition-duration:0.5s;
-
+        display:none;
         font-family: Ubuntu;  
         color: #33CC33;    
     }
+                                            /*stylesheets*/
+                                            /*stylesheets22*/
+
     #stylewrap22 {
         background-color: white;
         width: 0;
         height: 15vw;
         float:left;
         transition-duration:1s;
-        display:none;
     }
     #raper22 {
         margin-top: 3%;
-        display:none;
+   
         width: 90%;
         height: 15vw;
         float:left;
     } 
     #raper22:hover #stylewrap22 {
         width:68%;
-        display:none;
     }
     #raper22:hover #logotxt22 {
-        display:none;
+        visibility:visible;
         opacity:1;
         transition-duration:1s;
         transition-timing-function:ease-out;
@@ -367,14 +409,13 @@
         height: 15vw;
         float:left;
         transition-duration: 1s;
-        display:none;
     }
     #logo33 {
         display:block;
         width: 40%;
         height:auto;
         margin: 8% auto;
-        display:none;
+
     }
     #hoverme22 {
         font-size: 1.3vw;
@@ -382,7 +423,6 @@
         color: #ed610c;
         text-align:center;
         margin-top: 8%;
-        display:none;
     }
     #vyggo22 {
         font-size: 1.4vw;
@@ -391,7 +431,6 @@
         color: #ed610c;
         text-align:center;
         margin-top: 13%;
-        display:none;
     }
     #logotxt22 {
         font-size: 1.3vw;
@@ -401,18 +440,23 @@
         visibility:hidden;
         transition-timing-function:ease-out;
         transition-duration:0.5s;
-        display:none;
+
         font-family: Ubuntu;  
         color: #ed610c;    
     }  
+                                  /*stylesheets22*/
+                                  /*wordpress*/
     #wordpress {
+        display:none;
+        margin: 4% auto;
+        width: 20%;
+        height:auto;  
+    }
+    #wordpressgreen {
         display:block;
         margin: 4% auto;
         width: 20%;
-        height:auto;
-    }
-    #wordpressgreen {
-        display:none;
+        height:auto;  
     }
     #wordwrap {
         margin-top: 5%;
@@ -421,22 +465,27 @@
         float:left;
     }
     #wordtxt {
-        padding:10px 0px;
         text-align:center;
-        border: solid 2px white;
     }
-    #wordlink {      
-        color: white;
+    #wordlink {
+
+        color: #33cc33;
         font-family: Ubuntu;
         font-weight:500;
         text-decoration:none;
         font-size: 1.2vw;
+    }    
+    #wordwrap:hover #wordlink {
+        color:white;
     }
-    #wordtxt:hover {
-        background-color:white;
-        color:#ed610c;
-    }   
-    #arrow {
+    #wordwrap:hover #wordpressgreen {
+        display:none;
+    }
+    #wordwrap:hover #wordpress {
+        display:block;
+    }
+                                       /*wordpress*/                      
+ /*  #arrow {
         position:relative;
         width: 3%;
         height: auto;
@@ -462,9 +511,11 @@
         position: absolute;
         padding-top: 100px;
         margin-top: 8%;
-    }  
+    }*/  
+                                       /*wordpress*/  
+                                       /*container2*/ 
     #content3 {
-        background-color: #ed610c;
+        background-color: black;
         height: 35vw;
         width: 100%;
         position: absolute;
@@ -484,7 +535,7 @@
         margin-bottom: 2%;
         margin-top: 2%;
         font-family: Ubuntu;
-        color: white;
+        color: #33cc33;
         font-size: 2vw;
         font-weight: 500;
     }    
@@ -494,23 +545,26 @@
 
         display:block;
     }
-    #footer li {
+                                         /*container2*/
+                                         /*footer*/
+   #footer li {
     font-size: 1.2vw;
     display:inline-block;
     font-weight:600;
     transition-duration:0.3s;
     margin: 0 10.4%;
-    color: #ed610c;
-}                                
-    #footer li a {
-    color: #ed610c;
+    color: #33cc33;
+}
+
+#footer li a {
+    color: #33cc33;
     text-decoration:none !important;
 
 }
-    #footer li a:hover {
-    color: #33CC33;
+#footer li a:hover {
+    color: #ed610c;
 }
-    #footer {
+#footer {
     margin-bottom:0;
     margin-top: 2%;
     display:block;
@@ -524,6 +578,7 @@
     list-style-type:none;
     color:white;
     z-index: 50;
-    border-top: 2px solid white;
-    background-color: white;
-}                        
+    border-top: 2px solid #33cc33;
+    background-color: black;
+}
+                                         /*footer*/

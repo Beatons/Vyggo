@@ -1,4 +1,4 @@
-
+                                    /*Background*/
     body {
         background-color:white;
         margin: 0px;
@@ -25,7 +25,9 @@
         height: auto;
         opacity: 0;
         transition-duration:1s;    
-    }                                  
+    }
+                                    /*Background*/
+                                    /*header*/
     #logo {
         width: 80%;
         height: auto;
@@ -75,6 +77,8 @@
         height:auto;
         float:left;
     }
+                                    /*header*/
+                                    /*container1*/
     #container1 {
         width: 70%;
         height: 80%;
@@ -96,7 +100,8 @@
         margin-top: 8%;
         transition-duration: 2s;
       
-    }                                   
+    }
+                                     /*text 1*/
     #amazing {
         transition-duration: 0.2s;
     }
@@ -126,7 +131,10 @@
     #text4 {
         font-size: 1.6vw;
         font-family: Ubuntu;
+        width: 70%;
     }
+                                          /*text 1*/
+                                          /*subscription*/
     input {
         background:none;
         color:black;
@@ -163,6 +171,8 @@
         margin-bottom:4%;
 
     }
+
+    
     #Label1 {
         font-family: Ubuntu;
         font-size: 1.5vw;
@@ -173,6 +183,7 @@
         margin-top: 5%;
         float:left;
     }
+
     #Check {
         width: 5.3%;
         height: auto;
@@ -215,7 +226,7 @@
         background-color: white;
         transition-duration: 1s;
         }
-    #text {
+   /* #text {
         font-family: Ubuntu;
         margin-top: 36%;
         margin-left: 8%;
@@ -223,6 +234,8 @@
         font-weight: 500;
         font-size: 25px;
     }
+              */                                       /*subscription*/
+                                                       /*rooms*/
     #logo22 {
         display:none;
     }
@@ -234,7 +247,7 @@
         z-index: 20;
         margin-top: 5%;
     }
-    #chat2 {
+   #chat2 {
       
        transition-duration:1s;
     }
@@ -270,7 +283,8 @@
         border: solid 3px white;
         color: #ed610c;
         background-color: white;
-    }
+    }                                                 /*rooms*/
+                                                                    /*stylesheets*/  
     #stylewrap {
         background-color:black;
         width: 0;
@@ -288,7 +302,7 @@
     #raper:hover #stylewrap {
         width:68%;
     }
-    #raper:hover #logotxt {
+        #raper:hover #logotxt {
         visibility:visible;
         opacity:1;
         transition-duration:1s;
@@ -336,6 +350,9 @@
         font-family: Ubuntu;  
         color: #33CC33;    
     }
+                                      /*stylesheets*/     
+                                      /*stylesheets22*/
+
     #stylewrap22 {
         background-color: white;
         width: 0;
@@ -405,6 +422,8 @@
         font-family: Ubuntu;  
         color: #ed610c;    
     }  
+                                  /*stylesheets22*/
+                                  /*wordpress*/
     #wordpress {
         display:block;
         margin: 4% auto;
@@ -425,7 +444,8 @@
         text-align:center;
         border: solid 2px white;
     }
-    #wordlink {      
+    #wordlink {
+        
         color: white;
         font-family: Ubuntu;
         font-weight:500;
@@ -436,7 +456,8 @@
         background-color:white;
         color:#ed610c;
     }   
-    #arrow {
+                                     /*wordpress*/                         
+ /*  #arrow {
         position:relative;
         width: 3%;
         height: auto;
@@ -462,7 +483,8 @@
         position: absolute;
         padding-top: 100px;
         margin-top: 8%;
-    }  
+    }*/  
+                                    /*container2*/
     #content3 {
         background-color: #ed610c;
         height: 35vw;
@@ -494,23 +516,26 @@
 
         display:block;
     }
-    #footer li {
+                                    /*container2*/
+                                     /*footer*/
+   #footer li {
     font-size: 1.2vw;
     display:inline-block;
     font-weight:600;
     transition-duration:0.3s;
     margin: 0 10.4%;
     color: #ed610c;
-}                                
-    #footer li a {
+}
+                                
+#footer li a {
     color: #ed610c;
     text-decoration:none !important;
 
 }
-    #footer li a:hover {
+#footer li a:hover {
     color: #33CC33;
 }
-    #footer {
+#footer {
     margin-bottom:0;
     margin-top: 2%;
     display:block;
@@ -526,4 +551,5 @@
     z-index: 50;
     border-top: 2px solid white;
     background-color: white;
-}                        
+}
+                                     /*footer*/

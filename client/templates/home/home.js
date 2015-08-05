@@ -27,6 +27,10 @@ if (Meteor.isClient) {
         $('#Label1').show();
 
         event.preventDefault();
+    },
+      
+    "click #logo2":function(event) {
+        document.getElementById()
     }
   });
 }
@@ -106,4 +110,6 @@ window.onload = initate;
             return '';
         }
 
-**/
+*/ 
+
+
