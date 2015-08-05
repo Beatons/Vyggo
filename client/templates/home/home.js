@@ -1,7 +1,7 @@
 Subscriptions = new Mongo.Collection('subscriptions');
 
 if (Meteor.isClient) {
-  Template.body.events({
+  Template.home.events({
     "submit #subscribe":function(event) {
         
         var fn = event.target.firstname;
@@ -24,7 +24,7 @@ if (Meteor.isClient) {
         ie.value = '';
         nl.checked = false;
 
-        $('#Label1').show();
+        document.getElementById('#Label1').display = 'block';
 
         event.preventDefault();
     },
