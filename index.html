@@ -7,84 +7,113 @@
 
     <meta name="description" content="We gather the people with a shared interest and enthusiasm" />
     <meta name="keywords" content="conversation,Vyggo,blog,chat,talk,startup,forum,feedback,subject,topic" />
+    <script>
+    function swapStyleSheet(sheet) {
+    document.getElementById("pagestyle").setAttribute("href", sheet);
+}
+
+function initate() {
+    var style1 = document.getElementById("stylesheet1");
+    var style2 = document.getElementById("stylesheet2");
+
+    style1.onclick = function () { swapStyleSheet("style.css") };
+    style2.onclick = function () { swapStyleSheet("dark.css") };
+}
+
+window.onload = initate;
+
+
+        var style_cookie_name = "style";
+        var style_cookie_duration = 30;
+
+        // *** END OF CUSTOMISABLE SECTION ***
+        // You do not need to customise anything below this line
+
+        function switch_style(css_title) {
+            // You may use this script on your site free of charge provided
+            // you do not remove this notice or the URL below. Script from
+            // http://www.thesitewizard.com/javascripts/change-style-sheets.shtml
+            var i, link_tag;
+            for (i = 0, link_tag = document.getElementsByTagName("link") ;
+              i < link_tag.length ; i++) {
+                if ((link_tag[i].rel.indexOf("stylesheet") != -1) &&
+                  link_tag[i].title) {
+                    link_tag[i].disabled = true;
+                    if (link_tag[i].title == css_title) {
+                        link_tag[i].disabled = false;
+                    }
+                }
+                set_cookie(style_cookie_name, css_title,
+                  style_cookie_duration);
+            }
+        }
+        function set_style_from_cookie() {
+            var css_title = get_cookie(style_cookie_name);
+            if (css_title.length) {
+                switch_style(css_title);
+            }
+        }
+        function set_cookie(cookie_name, cookie_value,
+            lifespan_in_days, valid_domain) {
+            // http://www.thesitewizard.com/javascripts/cookies.shtml
+            var domain_string = valid_domain ?
+                               ("; domain=" + valid_domain) : '';
+            document.cookie = cookie_name +
+                               "=" + encodeURIComponent(cookie_value) +
+                               "; max-age=" + 60 * 60 *
+                               24 * lifespan_in_days +
+                               "; path=/" + domain_string;
+        }
+        function get_cookie(cookie_name) {
+            // http://www.thesitewizard.com/javascripts/cookies.shtml
+            var cookie_string = document.cookie;
+            if (cookie_string.length != 0) {
+                var cookie_value = cookie_string.match(
+                                '(^|;)[\s]*' +
+                                cookie_name +
+                                '=([^;]*)');
+                return decodeURIComponent(cookie_value[2]);
+            }
+            return '';
+        }
+        </script>
 </head>
 <body>
-    <div class="container">
-        <div class="wrapper">
+    
+        
             <img id="imgbg1" src="img/creative.jpg" />
             <img id="imgbg" src="carbon.jpg" />
+    <div id="subscribe1"> </div>
+    <div id="content3"></div>
+    <div class="wrapper">
             <header>
+                <div id="headerlogo">
                 <img id="logo" src="img/logo.png" />
                 <img id="logologo" src="img/logo2.png"/>
-                <div id="vyggo">Vyggo</div>
-                <a href="#"><img class="icon" src="img/facebook.png" /></a>
-                <a href="#"><img class="icon" src="img/linkedin.png" /></a>
-                <a href="#"><img class="icon" src="img/twitter.png" /></a>
-                <a href="#"><img class="icon" src="img/googleplus.png" /></a>
-
+                <div id="vyggo">Vyggo</div></div>
+            <div id="icons">
+                <a href="#"><img class="icon" src="facebookorange.png" /></a>
+                <a href="#"><img class="icon" src="linkedinorange.png" /></a>
+                <a href="#"><img class="icon" src="twitterorange.png" /></a>
+                <a href="#"><img class="icon" src="googleplusorange.png" /></a>
+                </div>
+                <div id="iconsgreen">
+                    <a href="#"><img class="icongreen" src="facebookgreen.png" /></a>
+                    <a href="#"><img class="icongreen" src="linkedingreen.png" /></a>
+                    <a href="#"><img class="icongreen" src="twittergreen.png" /></a>
+                    <a href="#"><img class="icongreen" src="googleplusgreen.png" /></a>
+                    </div>
             </header>
-
+        <div id="container1">
             <div class="text2">
                 <h1 id="amazing">Expressing made amazing !</h1>
                 <h1 id="gameamazing">Expressing made game amazing</h1>
 
                 <div id="text4">This is the begining of why this product will be amazing:</div>
             </div>
-            <div id="subscribe1">
 
-            </div>
-            <form id="subscribe">
-                    <div id="newsletters">Subscribe for our newsletters</div>
-                    <!--Working subscription that collects data in database -->
-                    <table class="auto-style1">
-                        <tr>
 
-                            <td class="auto-style2">
-                                <input type="text" ID="txtfname" name="firstname" placeholder="Your name" />
-                            </td>
-                        </tr>
-                        <tr>
-
-                            <td class="auto-style2">
-                                <input type="text" ID="txtlname" name="lastname" placeholder="Your last name" />
-                            </td>
-                        </tr>
-                        <tr>
-
-                            <td class="auto-style2">
-                                <input type="text" ID="txtemail" name="email" placeholder="Your email" />
-                            </td>
-                        </tr>
-                        <tr>
-
-                            <td class="auto-style2">
-                                <input type="text" ID="txtinterest"  name="interest" placeholder="Share your interests :)" />
-                            </td>
-                        </tr>
-
-                        <tr>
-
-                            <td class="auto-style2">
-                                <input type="checkbox" ID="Check" name="newsletter" Width="300px" Height="47px" />
-                                <label> Check if you want to make this product more awsome!(Optional) </label>
-                            </td>
-                        </tr>
-
-                        <tr>
-
-                            <td class="auto-style2">
-                                <input type="submit" ID="Button1" Text="Subscribe" CssClass="butonas" Height="40px" />
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="auto-style3" colspan="2">
-                                <label ID="Label1" Visible="False"></label>
-                                </td>
-                            </tr>
-
-                        </table>
-                </form>
+           
                 <div id="rooms"><div id="row">
                     <a href="http://www.vyggoroom1.somee.com/index.html"><div class="chat" id="chat1">
                         <h2>Q&A chat</h2><h6>Our staff will be anwering <br /> your questions</h6>
@@ -103,22 +132,72 @@
                         <h2>Social salad</h2><h6>Room that has random<br />topics all the time.
                     </h6> 
                 </div></a></div></div>
-                <div id="logo2" onclick="switch_style('dark'); return false;"><img id="logo3" src="img/logo2.png" /><div id="vyggo2">Vyggo gaming</div><div id='hoverme'>Hover me!</div><div id="logotxt">As you see, the gamer has the big focus.<br />Why? Gamers are in big need of finding people<br /> with the same enthusiasm as themselves. Teamed<br /> with you,the gamer this is EZ.</div></div>
-                <div id="logo22" onclick="switch_style('style'); return false;"><img id="logo33" src="img/logo.png" /><div id="vyggo22">Vyggo neutral</div><div id="hoverme2">Hover me!</div><div id="logotxt2">As you see, the gamer has the big focus.<br />Why? Gamers are in big need of finding people<br /> with the same enthusiasm as themselves. Teamed<br /> with you,the gamer this is EZ.</div></div>
-                <a href="http://www.vyggoblog.wordpress.com " id="wordlink"><img src="img/wordpress.png" id="wordpress" />Follow the development on our blog.</a>
+            
+                <div id="raper">   
+                    <div id="logo2" onclick="switch_style('dark'); return false;">
+                        <img id="logo3" src="img/logo2.png" />
+                        <div id="vyggo2">Vyggo gaming</div>
+                        <div id='hoverme'>Hover me!</div>
+                        </div>
+                    <div id="stylewrap"><div id="logotxt">
+                        As you see, the gamer has the big focus.
+                            <br />Why? Gamers are in big need of finding people
+                            <br /> with the same enthusiasm as themselves. Teamed
+                            <br /> with you,the gamer this is EZ.
+                            
+                            </div> </div></div>
 
+                   <div id="raper22">   
+                       <div id="logo22" onclick="switch_style('style'); return false;">
+                        <img id="logo33" src="img/logo.png" />
+                        <div id="vyggo22">Vyggo neutral</div>
+                        <div id="hoverme22">Hover me!</div>
+                       </div>
+                       <div id="stylewrap22"> <div id="logotxt22">
+                           As you see, the gamer has the big focus.
+                            <br />Why? Gamers are in big need of finding people
+                            <br /> with the same enthusiasm as themselves. Teamed
+                            <br /> with you,the gamer this is EZ.
 
+                        </div></div> </div>
+      
 
-                <a href="#anchor"><img id="arrow" src="img/arrow.png" /></a>
+                         </div>
 
+            <form id="subscribe">
+                <div id="subscribeinside">
+                    <div id="newsletters">Subscribe for our newsletters</div>
+                    <!--Working subscription that collects data in database -->
 
-                <a name="anchor" id="anchor"></a>
+                                <input type="text" ID="txtfname" name="firstname" placeholder="Your name" />
+                     
+                                <input type="text" ID="txtlname" name="lastname" placeholder="Your last name" />
+                           
+                                <input type="text" ID="txtemail" name="email" placeholder="Your email" />
+                                <input type="text" ID="txtinterest"  name="interest" placeholder="Share your interests :)" />
+                           
+                                <input type="checkbox" ID="Check" name="newsletter" Width="300px" Height="47px" />
+                                <label> Check if you want to make this product more awsome!(Optional) </label>
+                                <input type="submit" ID="Button1" Text="Subscribe" CssClass="butonas" Height="40px" />
+                            
+                                <label ID="Label1" Visible="False"></label>
+                </div>
+            </form>
+        
+               <div id="wordwrap">   
+                   <a href="http://www.vyggoblog.wordpress.com " id="wordlink">
+                       <img src="wordpress.png" id="wordpress" />
+                       <img src="wordpressgreen.png" id="wordpressgreen" />
+                    <div id="wordtxt">   Follow the development on our blog. </div>
 
-                <div id="content3"></div>
-                
+                   </a> 
+
+               </div>
+                <div id="container2">
                 <div id="line2">Our product vision, what is yours?</div>
                 <img id="kenneths_maddness" src="img/Alpha.png" />
-                
+                </div>
+          </div>
                 <footer>
                     <ul id="footer">
                         <li>Contact us</li>
@@ -128,6 +207,4 @@
                     
 
                 </footer>
-            </div>
-        </div> 
     </body>

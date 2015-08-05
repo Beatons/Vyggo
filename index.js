@@ -36,8 +36,7 @@ Meteor.methods({
         Subscriptions.insert(subscription);
     }
 });
-
-/**
+/*
 function swapStyleSheet(sheet) {
     document.getElementById("pagestyle").setAttribute("href", sheet);
 }
@@ -51,9 +50,7 @@ function initate() {
 }
 
 window.onload = initate;
-**/
 
-/**
 
         var style_cookie_name = "style";
         var style_cookie_duration = 30;
