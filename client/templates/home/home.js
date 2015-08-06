@@ -1,7 +1,4 @@
-Subscriptions = new Mongo.Collection('subscriptions');
-
-if (Meteor.isClient) {
-  Template.home.events({
+Template.home.events({
     "submit #subscribe":function(event) {
         
         var fn = event.target.firstname;
@@ -28,19 +25,12 @@ if (Meteor.isClient) {
 
         event.preventDefault();
     },
-      
+    
     "click #logo2":function(event) {
         document.getElementById('theme').href = 'dark/dark.css';
     },
-      
+    
     "click #logo22":function(event) {
         document.getElementById('theme').href = 'templates/home/home.css';
-    }
-  });
-}
-
-Meteor.methods({
-    subscribe: function(subscription) {
-        Subscriptions.insert(subscription);
     }
 });

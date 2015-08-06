@@ -1,3 +1,7 @@
-Meteor.publish('room', function(name) {
-	return Rooms.findOne({ name:name });
+Meteor.publish('room', function(roomName) {
+	return Rooms.find({ name:roomName });
+});
+
+Meteor.publish('subscriptions', function() {
+	return Subscriptions.find();
 });
