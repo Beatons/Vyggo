@@ -1,0 +1,555 @@
+                                    /*Background*/
+    body {
+        background-color:white;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+    #imgbg1 {
+        position:fixed;
+        z-index: -100;
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        transition-duration:1s;
+    }
+    .wrapper {
+        margin: 0 auto;
+        width:92%;
+        height:100%;
+    }
+    #imgbg {
+        position:fixed;
+        z-index: -100;
+        width: 170%;
+        height: auto;
+        opacity: 0;
+        transition-duration:1s;    
+    }
+                                    /*Background*/
+                                    /*header*/
+    #logo {
+        width: 80%;
+        height: auto;
+        margin: 10% auto;
+        position: relative;
+        display:block;
+    }
+    header {
+        margin:0 auto;
+
+        width:100%;
+        float:left;
+        height: 100%; 
+        position: relative;
+    
+    }
+    #logologo {
+        display:none;
+    }
+    #icons {
+        width:92%;
+        height: 100%;
+        position:relative;
+        float:left;
+    }
+    #iconsgreen {
+        display:none;
+    }
+    .icon {
+        margin-top: 2%;
+        height: auto;
+        width: 3.5%;
+        padding-right: 2.5%;
+        float: right;
+        display:inline-block;
+    }   
+    #vyggo {
+        font-family: Ubuntu;
+        font-weight: 700;
+        font-size: 1.3vw;
+        color: #ed610c;
+        text-align:center;
+        margin-bottom:5%;
+    }
+    #headerlogo {
+        width: 8%;
+        height:auto;
+        float:left;
+    }
+                                    /*header*/
+                                    /*container1*/
+    #container1 {
+        width: 70%;
+        height: 80%;
+        position:relative;
+        float:left;
+    }
+     #subscribe1 {
+        background-color:#ed610c;
+        opacity: 0.9;
+        margin-left:0;
+        margin-right:0;
+        position: absolute;
+        width: 100%;
+        font-family: Ubuntu;
+        height: 45vw;
+        text-align: left;
+        font-weight: 600;
+        z-index: -5;
+        margin-top: 8%;
+        transition-duration: 2s;
+      
+    }
+                                     /*text 1*/
+    #amazing {
+        transition-duration: 0.2s;
+    }
+    h1 {
+        transition-duration: 1s;
+
+    }
+    #gameamazing {
+        margin-top: -13%;
+        display:none;
+        transition-duration: 0.2s;
+}
+    .text2 {
+        float:left;
+        margin-top: 1%;
+        font-family: Ubuntu;
+        position: relative;
+        color: white;
+        font-weight: 500;
+        font-size: 1.8vw;
+    }
+    h1 {
+        font-weight: 600;
+      
+
+    }
+    #text4 {
+        font-size: 1.6vw;
+        font-family: Ubuntu;
+        width: 70%;
+    }
+                                          /*text 1*/
+                                          /*subscription*/
+    input {
+        background:none;
+        color:black;
+        font-size: 1vw;
+        border: 1px solid white;
+        font-family: Ubuntu;
+        font-weight: 600;
+        padding: 2% 2%;
+        margin: 1.8% auto;
+    }
+    input:-moz-placeholder {
+        color: gray;
+    }
+    #subscribeinside {
+        width:70%;
+        height:100%;
+        margin-top: 13%;
+        margin-left: auto;
+        margin-right:auto;
+    }
+    #subscribe {
+        float: right;
+        position: relative;
+        width: 30%;
+        height:80%;
+        font-family: Ubuntu;
+        text-align: left;
+        font-weight: 500;
+    }
+    #newsletters {
+        color: white;
+        float:left;
+        font-size: 1.2vw;
+        margin-bottom:4%;
+
+    }
+
+    
+    #Label1 {
+        font-family: Ubuntu;
+        font-size: 1.5vw;
+        font-weight: 600;
+        text-align: center;
+        position: relative;
+        color: white;
+        margin-top: 5%;
+        float:left;
+    }
+
+    #Check {
+        width: 5.3%;
+        height: auto;
+        color: white;
+        float:left;
+        margin-top:4%;
+        position:relative;
+    }
+    label {
+        margin-top:2%;
+        color: white;
+        float:left;
+        width:90%;
+        font-size: 1.1vw;
+        position:relative;
+        margin-left:3%;
+    }
+    #txtfname, #txtinterest, #txtlname, #txtemail {
+        border: 1px solid #456879;
+        border-radius: 5px;
+        background-color: lightgoldenrodyellow;
+        font-family: Ubuntu;
+        padding-left: 1.5%;
+        width: 100%;
+        float:left;
+    }
+    #Button1 {
+        padding: 1.5% 5%;
+        float:left;
+        margin-top: 6%;
+        color: white;
+        font-family: Ubuntu;
+        font-weight: 500;
+        border: 2px solid white;
+        font-size: 1.1vw;
+    }
+    #Button1:hover {
+        border: solid 2px white;
+        color: #ed610c;
+        background-color: white;
+        transition-duration: 1s;
+        }
+   /* #text {
+        font-family: Ubuntu;
+        margin-top: 36%;
+        margin-left: 8%;
+        color:  white;
+        font-weight: 500;
+        font-size: 25px;
+    }
+              */                                       /*subscription*/
+                                                       /*rooms*/
+    #logo22 {
+        display:none;
+    }
+    #rooms {
+        width:100%;
+        height:100%;
+        float:left;
+        display: block;
+        z-index: 20;
+        margin-top: 5%;
+    }
+   #chat2 {
+      
+       transition-duration:1s;
+    }
+    h2 {
+       font-size: 2vw;
+       font-weight: 600;
+       margin-bottom: 3%;
+    }
+    h6 {
+        font-size: 0.9vw;
+        font-weight: 500;
+    }
+    .chat {
+        float: left;
+        margin-right: 2%;
+        border: solid 3px white;
+        color: white;
+        text-align: center;
+        font-family: Ubuntu;
+        width: 28%;
+        height: 11vw;
+        z-index: 20;
+        transition-duration: 1s;
+    }
+    #chat2 ul li {
+        list-style-type: none;
+        font-family: Ubuntu;
+        margin:20px 0px;
+        display:none;
+        transition-duration:1s
+    }
+    .chat:hover {
+        border: solid 3px white;
+        color: #ed610c;
+        background-color: white;
+    }                                                 /*rooms*/
+                                                                    /*stylesheets*/  
+    #stylewrap {
+        background-color:black;
+        width: 0;
+        height: 15vw;
+        float:left;
+        transition-duration:1s;
+    }
+    #raper {
+        margin-top: 3%;
+   
+        width: 90%;
+        height: 15vw;
+        float:left;
+    } 
+    #raper:hover #stylewrap {
+        width:68%;
+    }
+        #raper:hover #logotxt {
+        visibility:visible;
+        opacity:1;
+        transition-duration:1s;
+        transition-timing-function:ease-out;
+    }
+    #logo2 {
+
+        background-color: black;
+        width: 32%;
+        height: 15vw;
+        float:left;
+        transition-duration: 1s;
+    }
+    #logo3 {
+        display:block;
+        width: 40%;
+        height:auto;
+        margin: 8% auto;
+
+    }
+    #hoverme {
+        font-size: 1.3vw;
+        font-family: Ubuntu;
+        color: #33CC33;
+        text-align:center;
+        margin-top: 8%;
+    }
+    #vyggo2 {
+        font-size: 1.4vw;
+        font-weight:500;
+        font-family: Ubuntu;
+        color: #33CC33;
+        text-align:center;
+        margin-top: 13%;
+    }
+    #logotxt {
+        font-size: 1.3vw;
+        margin: 7% 0%;
+        position:absolute;
+        opacity: 0;
+        visibility:hidden;
+        transition-timing-function:ease-out;
+        transition-duration:0.5s;
+
+        font-family: Ubuntu;  
+        color: #33CC33;    
+    }
+                                      /*stylesheets*/     
+                                      /*stylesheets22*/
+
+    #stylewrap22 {
+        background-color: white;
+        width: 0;
+        height: 15vw;
+        float:left;
+        transition-duration:1s;
+        display:none;
+    }
+    #raper22 {
+        margin-top: 3%;
+        display:none;
+        width: 90%;
+        height: 15vw;
+        float:left;
+    } 
+    #raper22:hover #stylewrap22 {
+        width:68%;
+        display:none;
+    }
+    #raper22:hover #logotxt22 {
+        display:none;
+        opacity:1;
+        transition-duration:1s;
+        transition-timing-function:ease-out;
+    }
+    #logo22 {
+        background-color: white;
+        width: 32%;
+        height: 15vw;
+        float:left;
+        transition-duration: 1s;
+        display:none;
+    }
+    #logo33 {
+        display:block;
+        width: 40%;
+        height:auto;
+        margin: 8% auto;
+        display:none;
+    }
+    #hoverme22 {
+        font-size: 1.3vw;
+        font-family: Ubuntu;
+        color: #ed610c;
+        text-align:center;
+        margin-top: 8%;
+        display:none;
+    }
+    #vyggo22 {
+        font-size: 1.4vw;
+        font-weight:500;
+        font-family: Ubuntu;
+        color: #ed610c;
+        text-align:center;
+        margin-top: 13%;
+        display:none;
+    }
+    #logotxt22 {
+        font-size: 1.3vw;
+        margin: 7% 0%;
+        position:absolute;
+        opacity: 0;
+        visibility:hidden;
+        transition-timing-function:ease-out;
+        transition-duration:0.5s;
+        display:none;
+        font-family: Ubuntu;  
+        color: #ed610c;    
+    }  
+                                  /*stylesheets22*/
+                                  /*wordpress*/
+    #wordpress {
+        display:block;
+        margin: 4% auto;
+        width: 20%;
+        height:auto;
+    }
+    #wordpressgreen {
+        display:none;
+    }
+    #wordwrap {
+        margin-top: 5%;
+        width:30%;
+        height:20%;
+        float:left;
+    }
+    #wordtxt {
+        padding:10px 0px;
+        text-align:center;
+        border: solid 2px white;
+    }
+    #wordlink {
+        
+        color: white;
+        font-family: Ubuntu;
+        font-weight:500;
+        text-decoration:none;
+        font-size: 1.2vw;
+    }
+    #wordtxt:hover {
+        background-color:white;
+        color:#ed610c;
+    }   
+                                     /*wordpress*/                         
+ /*  #arrow {
+        position:relative;
+        width: 3%;
+        height: auto;
+        top: 3%
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes hoverIn {
+        0% {
+            left: 60%;
+            top:2%;
+        }
+        50% {
+            left: 60%;
+            top: -4%;
+        }
+        100% {
+            left: 60%;
+            top: -2%;
+        }
+    }
+    #anchor {
+        position: absolute;
+        padding-top: 100px;
+        margin-top: 8%;
+    }*/  
+                                    /*container2*/
+    #content3 {
+        background-color: #ed610c;
+        height: 35vw;
+        width: 100%;
+        position: absolute;
+        margin-top: 55vw;
+        opacity: 0.9;
+        z-index: -20;
+        transition-duration:1s;
+    }
+    #container2 {
+        margin-top: 5%;
+        width: 100%;
+        height: 100%;
+
+        float:left;
+    }
+    #line2 {
+        margin-bottom: 2%;
+        margin-top: 2%;
+        font-family: Ubuntu;
+        color: white;
+        font-size: 2vw;
+        font-weight: 500;
+    }    
+    #kenneths_maddness {
+        width: 100%;
+        height: auto;
+
+        display:block;
+    }
+                                    /*container2*/
+                                     /*footer*/
+   #footer li {
+    font-size: 1.2vw;
+    display:inline-block;
+    font-weight:600;
+    transition-duration:0.3s;
+    margin: 0 10.4%;
+    color: #ed610c;
+}
+                                
+#footer li a {
+    color: #ed610c;
+    text-decoration:none !important;
+
+}
+#footer li a:hover {
+    color: #33CC33;
+}
+#footer {
+    margin-bottom:0;
+    margin-top: 2%;
+    display:block;
+    height: 100%;
+    float:left;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    padding-left: 0;
+    width: 100%;
+    font-family:Ubuntu;
+    list-style-type:none;
+    color:white;
+    z-index: 50;
+    border-top: 2px solid white;
+    background-color: white;
+}
+                                     /*footer*/
