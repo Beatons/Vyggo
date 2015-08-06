@@ -31,6 +31,10 @@ if (Meteor.isClient) {
       
     "click #logo2":function(event) {
         document.getElementById('theme').href = 'dark/dark.css';
+    },
+      
+    "click #logo22":function(event) {
+        document.getElementById('theme').href = 'templates/home/home.css';
     }
   });
 }

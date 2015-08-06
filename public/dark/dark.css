@@ -1,4 +1,4 @@
-﻿                                    /*Background*/
+                                    /*Background*/
     body {
         background-color:black;
         margin: 0px;
@@ -63,10 +63,11 @@
         display:none;
     } 
     #iconsgreen{
-         width:92%;
+        width:92%;
         height: 100%;
         position:relative;
         float:left;
+        display:block;
     }  
     .icongreen {
         margin-top: 2%;
@@ -119,6 +120,7 @@
         visibility:hidden;
     }
     #gameamazing {
+        display:block;
         margin-top: -13%;
         transition-duration: 0.3s;
         font-size: 4vw;
@@ -229,7 +231,8 @@
         position:relative;
     }
     #txtfname, #txtinterest, #txtlname, #txtemail {
-       
+        border:solid 1px #33CC33;
+        background:none;
         font-family: Ubuntu;
         padding-left: 1.5%;
         width: 100%;
@@ -304,6 +307,7 @@
         transition-duration:1s
     }
     .chat:hover {
+        background:none;
         border: solid 3px white;
         color: white;
     }                                                 /*rooms*/
@@ -386,10 +390,11 @@
         height: 15vw;
         float:left;
         transition-duration:1s;
+        display:block;
     }
     #raper22 {
         margin-top: 3%;
-   
+        display:block;
         width: 90%;
         height: 15vw;
         float:left;
@@ -404,6 +409,7 @@
         transition-timing-function:ease-out;
     }
     #logo22 {
+        display:block;
         background-color: white;
         width: 32%;
         height: 15vw;
@@ -418,6 +424,7 @@
 
     }
     #hoverme22 {
+        display:block;
         font-size: 1.3vw;
         font-family: Ubuntu;
         color: #ed610c;
@@ -425,6 +432,7 @@
         margin-top: 8%;
     }
     #vyggo22 {
+        display:block;
         font-size: 1.4vw;
         font-weight:500;
         font-family: Ubuntu;
@@ -465,7 +473,9 @@
         float:left;
     }
     #wordtxt {
+        padding: 10px 0px;
         text-align:center;
+        border: solid 2px #33CC33;
     }
     #wordlink {
 
@@ -474,7 +484,14 @@
         font-weight:500;
         text-decoration:none;
         font-size: 1.2vw;
-    }    
+    }
+    #wordtxt {
+        padding: 10px 0px;
+        text-align:center;
+        border: solid 2px white;
+        background:none;
+        color:white;
+    }
     #wordwrap:hover #wordlink {
         color:white;
     }
