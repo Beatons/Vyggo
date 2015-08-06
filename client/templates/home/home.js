@@ -34,7 +34,7 @@ if (Meteor.isClient) {
     },
       
     "click #logo22":function(event) {
-        document.getElementById('theme').href = 'templates/home/home.css';
+        document.getElementById('theme').href = 'client/templates/home/home.css';
     }
   });
 }

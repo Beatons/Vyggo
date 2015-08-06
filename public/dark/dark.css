@@ -1,4 +1,4 @@
-                                    /*Background*/
+                                    /*Background1*/
     body {
         background-color:black;
         margin: 0px;
@@ -22,7 +22,7 @@
         position:fixed;
         z-index: -100;
         width: 100%;
-        height: 170%;
+        height: auto;
         opacity: 1;
     }
                                     /*Background*/
@@ -149,30 +149,29 @@
         background:none;
         color: #33cc33;
         font-size: 1vw;
-        border: 1px solid #33cc33;
         font-family: Ubuntu;
         font-weight: 600;
         padding: 2% 2%;
         margin: 1.8% auto;
     }
     #txtemail:hover {
-        outline: solid black 1px;
+        border: solid black 1px;
         transition-duration:0.3s;
     }
     #txtlname:hover {
-        outline: solid black 1px;
+        border: solid black 1px;
         transition-duration:0.3s;
     }
     #txtfname:hover {
-        outline: solid black 1px;
+        border: solid black 1px;
         transition-duration:0.3s;
     }
     #txtinterest:hover {
-        outline: solid black 1px;
+        border: solid black 1px;
         transition-duration:0.3s;
     }
     #Check:hover {
-        outline: solid black 1px;
+        border: solid black 1px;
         transition-duration:0.3s;
     }
     input:-moz-placeholder {
@@ -218,7 +217,6 @@
         float:left;
         position:relative;
         margin-top:3%;
-        outline: solid #33cc33 2px;
 
     }
     label {
@@ -231,13 +229,12 @@
         position:relative;
     }
     #txtfname, #txtinterest, #txtlname, #txtemail {
-        border:solid 1px #33CC33;
         background:none;
         font-family: Ubuntu;
         padding-left: 1.5%;
         width: 100%;
         float:left;
-        outline:solid #33cc33 1px; 
+        border:solid #33cc33 1px; 
         
     }
     #Button1 {
@@ -251,6 +248,7 @@
         font-size: 1.1vw;
     }
     #Button1:hover {
+        background:none;
         border: solid 2px white;
         color: white;
 
@@ -485,7 +483,7 @@
         text-decoration:none;
         font-size: 1.2vw;
     }
-    #wordtxt {
+    #wordwrap:hover #wordtxt {
         padding: 10px 0px;
         text-align:center;
         border: solid 2px white;
