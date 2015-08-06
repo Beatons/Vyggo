@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 body {
     background-color:white;
     margin: 0px;
@@ -35,6 +36,44 @@ body {
 }
 header {
     margin:0 auto;
+=======
+    body {
+        background-color:white;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+    #imgbg1 {
+        position:fixed;
+        z-index: -100;
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        transition-duration:1s;
+    }
+    .wrapper {
+        margin: 0 auto;
+        width:92%;
+        height:100%;
+    }
+    #imgbg {
+        position:fixed;
+        z-index: -100;
+        width: 100%;
+        height: auto;
+        opacity: 0;
+        transition-duration:1s;    
+    }                                  
+    #logo {
+        width: 80%;
+        height: auto;
+        margin: 10% auto;
+        position: relative;
+        display:block;
+    }
+    header {
+        margin:0 auto;
+>>>>>>> 0a7b632a7af9f90e50158f197dea7377892165dd
 
     width:100%;
     float:left;
