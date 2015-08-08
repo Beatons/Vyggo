@@ -1,5 +1,5 @@
 Meteor.startup(function() {
-	Rooms.remove();
+	Rooms.remove({});
 	var rooms = [
 	{name: "questions"},
 	{name: "gaming"},

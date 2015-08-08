@@ -1,6 +1,5 @@
 Template.home.events({
     "submit #subscribe":function(event) {
-        
         var fn = event.target.firstname;
         var ln = event.target.lastname;
         var em = event.target.email;
