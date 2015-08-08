@@ -527,16 +527,14 @@
 }                        
                                         /*Loader*/
 #loader-wrapper {
-    position: fixed;
+    float:left;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1000;
 }
 #loader {
     display: block;
-    position: relative;
     left: 50%;
     top: 50%;
     width: 150px;
@@ -554,7 +552,6 @@
 
     #loader:before {
         content: "";
-        position: absolute;
         top: 5px;
         left: 5px;
         right: 5px;
@@ -608,12 +605,12 @@
     }
 
     #loader-wrapper .loader-section {
-        position: fixed;
+        
+        float:left;
         top: 0;
         width: 51%;
         height: 100%;
-        background-color: rgba(0,0,0,1);
-        z-index: 1000;
+        background-color: rgba(237,97,12,0.9);
         -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
         -ms-transform: translateX(0);  /* IE 9 */
         transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
