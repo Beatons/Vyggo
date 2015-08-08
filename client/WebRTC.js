@@ -2,13 +2,13 @@ WebRTC = (function() {
 
 	//== LOCAL ==//
 	var 
-	webrtc = this.webrtc = new SimpleWebRTC({
+	webrtc = new SimpleWebRTC({
 		localVideoEl: 'localVideo',
 		remoteVideosEl: '',
-		autoRequestMedia: true,
+		autoRequestMedia: false,
 		media:{
-			audio: false,
-			video: false
+			audio: true,
+			video: true
 		},
 		localVideo: {
 			autoplay: true,
@@ -18,7 +18,7 @@ WebRTC = (function() {
 		nick: "Annonymous"
 	}),
 
-	inRoom = false,
+	roomId = undefined,
 	isAnnonymous = true,
 
 	videoFrameClass = undefined,
@@ -35,29 +35,29 @@ WebRTC = (function() {
 			video, 
 			document.createElement('div'), 
 			videoFrameClass, 
-			peer.id, 
+			'video-'+peer.id, 
 			videoFrameContainer
-		);
+			);
 	});
 	webrtc.on('videoRemoved', function(video, peer) {
-		var frame = document.getElementById(peer.id);
+		var frame = document.getElementById('video-'+peer.id);
 		if(frame!==undefined)frame.remove();
 	});
 
 	webrtc.connection.on('message', function(data) {
 		if(data.type==='peer-text') {
 			EmbedElement(
-				data.payload,
+				document.createTextNode(data.payload.message),
 				document.createElement('div'),
 				textFrameClass,
-				peer.id,
+				data.payload.peerId,
 				textFrameContainer
-			);
+				);
 		}
 	});
 
 	webrtc.on('readyToCall', function() {
-		//might get useful at some point...
+		webrtc.joinRoom(roomId);
 	});
 
 	//== LOCAL UTILITY METHODS ==//
@@ -67,7 +67,7 @@ WebRTC = (function() {
 	};
 
 	var EmbedElement = function(element, frame, frameClass, frameId, container) {
-		container.appendChild(frame);
+		container.insertBefore(frame, container.childNodes[0]);
 		frame.className = frameClass;
 		frame.id = frameId;
 		frame.appendChild(element);
@@ -90,14 +90,14 @@ WebRTC = (function() {
 		},
 
 		leave: function() {
-			if(inRoom) {
-				webrtc.stopLocalVideo();
+			if(roomId!==undefined) {
+				webrtc.stopLocalMedia();
 				webrtc.leaveRoom();
 				textFrameClass = undefined;
 				textFrameContainer = undefined;
 				videoFrameClass = undefined;
 				videoFrameContainer = undefined;
-				inRoom=false;
+				roomId=undefined;
 			}
 			else {
 				console.log('failed to leave room. Already in room!');
@@ -105,18 +105,13 @@ WebRTC = (function() {
 		},
 
 		join: function(room, videoClass, videoContainer, textClass, textContainer) {
-			if(!inRoom && room!==undefined && typeof room==='string' && room.length>0) {
-				if (webrtc.localStream && webrtc.sessionReady) {
-					textFrameClass = textClass;
-					textFrameContainer = textContainer;
-					videoFrameClass = videoClass;
-					videoFrameContainer = videoContainer;
-					webrtc.joinRoom(room);
-					inRoom = true;
-				}
-				else {
-					console.log('failed to join room. Not ready!');
-				}
+			if(roomId===undefined && room!==undefined && typeof room==='string' && room.length>0) {
+				textFrameClass = textClass;
+				textFrameContainer = textContainer;
+				videoFrameClass = videoClass;
+				videoFrameContainer = videoContainer;
+				roomId = room;
+				webrtc.startLocalVideo();
 			}
 			else {
 				console.log('failed to join room. Invalid params!');
@@ -124,14 +119,15 @@ WebRTC = (function() {
 		},
 
 		message: function(text) {
-			webrtc.sendToAll('peer-text', text);
+			var peerId = webrtc.connection.getSessionid();
+			webrtc.sendToAll('peer-text', { message: text, peerId:peerId });
 			EmbedElement(
-				text,
+				document.createTextNode(text),
 				document.createElement('div'),
 				textFrameClass,
-				webrtc.connection.socket.sessionid,
+				peerId,
 				textFrameContainer
-			);
+				);
 		}
 	};
 })();

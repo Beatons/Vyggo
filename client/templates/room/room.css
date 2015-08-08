@@ -1,0 +1,21 @@
+#videos {
+  position:fixed;
+  bottom:0;
+  height:180px;
+  width:100%;
+}
+
+#videos video {
+  height:180px;
+  float:left;
+}
+
+#messages li {
+  width:100%;
+  list-style-type: none;
+  margin: 5px;
+}
+
+#new-message input {
+  width:100%;
+}

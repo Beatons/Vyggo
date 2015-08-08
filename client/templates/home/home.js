@@ -31,5 +31,17 @@ Template.home.events({
     
     "click #logo22":function(event) {
         document.getElementById('theme').href = 'client/templates/home/home.css';
+    },
+
+    "click #chat1":function(event) {
+        Router.go('/rooms/q&a');
+    },
+
+    "click #chat2":function(event) {
+        Router.go('/rooms/leagueoflegends');
+    }, 
+
+    "click #chat3":function(event) {
+        Router.go('/rooms/marvel');
     }
 });
