@@ -1,4 +1,9 @@
                                     /*Background1*/
+    #wrapper404 {
+        background-color: rgba(0,0,0,0.9)
+    }
+    
+    
     body {
         background-color:black;
         margin: 0px;

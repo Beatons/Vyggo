@@ -48,7 +48,7 @@ WebRTC = (function() {
 		if(data.type==='peer-text') {
 			EmbedElement(
 				document.createTextNode(data.payload.message),
-				document.createElement('div'),
+				document.createElement('li'),
 				textFrameClass,
 				data.payload.peerId,
 				textFrameContainer
@@ -67,7 +67,7 @@ WebRTC = (function() {
 	};
 
 	var EmbedElement = function(element, frame, frameClass, frameId, container) {
-		container.insertBefore(frame, container.childNodes[0]);
+		container.appendChild(frame);
 		frame.className = frameClass;
 		frame.id = frameId;
 		frame.appendChild(element);
@@ -123,7 +123,7 @@ WebRTC = (function() {
 			webrtc.sendToAll('peer-text', { message: text, peerId:peerId });
 			EmbedElement(
 				document.createTextNode(text),
-				document.createElement('div'),
+				document.createElement('li'),
 				textFrameClass,
 				peerId,
 				textFrameContainer
