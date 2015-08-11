@@ -521,7 +521,7 @@
     font-family:Ubuntu;
     list-style-type:none;
     color:white;
-    z-index: -20;
+    z-index: -5;
     border-top: 2px solid white;
     background-color: white;
 }                        
