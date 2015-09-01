@@ -1,34 +1,58 @@
 <template name='room'>
-	<div id="roomscontainer">
-    
-    <div id="chat8">
-      <div id="specification">
-        <div id="roominfo">
-          <div id="roomname">MArveL Room</div>
-          <div id="chatmaster">Chat master: Kenneth</div>
-          <div id="capacity">Room capacity: 6 video cameras and unlimited amount of chat users.</div>
-        </div>
-        <div id="profile">
-          
-        </div>
+  <div id="roomcontainer">
+    <div id="roomleft">
+      <div id="profileinfo">
+        <img id="profilepic" src="/dark/profile.png" />
       </div>
-      <div id="middle">
-        <div id="middleleft">
-          
-        </div>
-        <div id="middlecenter">
-          <form id='new-message'>
-            <input name='message' autocomplete='off' type='text' placeholder='Write message...' >
-          </form>
-          <ul id="messages"></ul>
-        </div>
-        <div id="userlist">
-          
-        </div>
+      <div id="roomfeedback">
+        <div id='feedtext'>Feedback</div>
+        <form id='userfeedback'>
+        <input name='feedback' autocomplete='off' type='textbox' placeholder='Write any improvements or suggestions you have in mind' >
+        <input type="submit" ID="Button1" value="Submit" />
+      </form>
       </div>
     </div>
-    
-    
+    <div id="roommiddle">
+      <div id="roominfo">
+        <div id="roominfoleft">
+        <div id="roomname">Marvel</div>
+        <div id="roomowner">Room owner: KKK </div>
+        </div>
+        <div id="roominforight">
+          <div id="roominforighttext">
+          <div id="nousers">Users: 5/6</div>
+          <div id="roomstatus">Status: Public</div>
+          <div id="roomfeatures">Features: ?</div>
+          </div>
+        </div>
+        </div>
+                    <ul id="messages"></ul>
+                    <form id='new-message'>
+            <input name='message' autocomplete='off' type='text' placeholder='Write message...' >
+          </form>
+
+    </div>
+    <div id="roomright">
+      <div id="roomshare">
+        <div id="roomcopyshare">Copy & Share</div>
+        <div id="roomsharetext">Share the link of the chat with someone as enthusiastic as you</div>
+        <input id="roomshareinput" readonly="readonly" type="text" value="http://www.vyggo.meteor.com/rooms/q&a">
+      </div>
+      <div id="userlist">
+        <ul id="userunorderedlist">
+          <li class="userview"><div class="username">Username</div><img class="uservolume" src="/dark/volume.png"><img class="userlistpic" src="/dark/profile.png"></li>
+          <li class="userview"><div class="username">Username</div><img class="uservolume" src="/dark/volume.png"><img class="userlistpic" src="/dark/profile.png"></li>
+          <li class="userview"><div class="username">Username</div><img class="uservolume" src="/dark/volume.png"><img class="userlistpic" src="/dark/profile.png"></li>
+          <li class="userview"><div class="username">Username</div><img class="uservolume" src="/dark/volume.png"><img class="userlistpic" src="/dark/profile.png"></li>
+          <li class="userview"><div class="username">Username</div><img class="uservolume" src="/dark/volume.png"><img class="userlistpic" src="/dark/profile.png"></li>
+          <li class="userview"><div class="username">Username</div><img class="uservolume" src="/dark/volume.png"><img class="userlistpic" src="/dark/profile.png"></li>
+          <li class="userview"><div class="username">Username</div><img class="uservolume" src="/dark/volume.png"><img class="userlistpic" src="/dark/profile.png"></li>
+          <li class="userview"><div class="username">Username</div><img class="uservolume" src="/dark/volume.png"><img class="userlistpic" src="/dark/profile.png"></li>
+          <li class="userview"><div class="username">Username</div><img class="uservolume" src="/dark/volume.png"><img class="userlistpic" src="/dark/profile.png"></li>
+          <li class="userview"><div class="username">Username</div><img class="uservolume" src="/dark/volume.png"><img class="userlistpic" src="/dark/profile.png"></li>
+        </ul>
+      </div>
+    </div>
     
   <div id='wrapper'>
     <div id="videos">
@@ -37,7 +61,8 @@
       </video>
       </div>
     
+      </div>
+    </div>
+    
   </div>
- </div>
-	</div>
 </template>
