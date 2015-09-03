@@ -126,6 +126,7 @@
         font-family: Ubuntu;
     }
     input {
+        cursor:pointer;
         background:none;
         color:black;
         font-size: 1vw;
@@ -246,6 +247,7 @@
     font-weight: 500;
 }
 .chat {
+    cursor: pointer;
     float: left;
     margin-right: 2%;
     border: solid 3px white;
@@ -293,7 +295,7 @@
     transition-timing-function:ease-out;
 }
 #logo2 {
-
+    cursor:pointer;
     background-color: black;
     width: 32%;
     height: 15vw;

@@ -2,14 +2,26 @@
   <div id="roomcontainer">
     <div id="roomleft">
       <div id="profileinfo">
+        <img id="roomlogo" src="/dark/logo.png" />
         <img id="profilepic" src="/dark/profile.png" />
+        <div id='buttonwrraper'>
+        <div id="subscribedrooms">Subscribed<div id="notificationsr"></div>
+          </div>
+          <div id="friendslist">Friends list<div id="notificationfl"></div>
+          </div>
+        </div>
       </div>
       <div id="roomfeedback">
         <div id='feedtext'>Feedback</div>
         <form id='userfeedback'>
-        <input name='feedback' autocomplete='off' type='textbox' placeholder='Write any improvements or suggestions you have in mind' >
-        <input type="submit" ID="Button1" value="Submit" />
+        <input name='feedback' id="feedbacktextbox" autocomplete='off' type='textbox' placeholder='Write any improvements or suggestions you have in mind' >
+        <input type="submit" ID="feedbacksubmitbutton" value="Submit" />
       </form>
+      </div>
+      <div id='usercontrol'>
+        <img id="xelophoneicon" src="/dark/xhelophone.png">
+        <img id="headphoneicon" src="/dark/headphones.png">
+        <img id="settingicon" src="/dark/cog.png">
       </div>
     </div>
     <div id="roommiddle">
@@ -26,15 +38,16 @@
           </div>
         </div>
         </div>
+        <div id='chatmiddle'>
                     <ul id="messages"></ul>
                     <form id='new-message'>
-            <input name='message' autocomplete='off' type='text' placeholder='Write message...' >
+            <input id='messageinput' name='message' autocomplete='off' type='text' placeholder='Write message...' >
           </form>
-
+        </div>
     </div>
     <div id="roomright">
       <div id="roomshare">
-        <div id="roomcopyshare">Copy & Share</div>
+        <div id="roomcopyshare">Share room</div>
         <div id="roomsharetext">Share the link of the chat with someone as enthusiastic as you</div>
         <input id="roomshareinput" readonly="readonly" type="text" value="http://www.vyggo.meteor.com/rooms/q&a">
       </div>

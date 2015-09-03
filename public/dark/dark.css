@@ -412,6 +412,7 @@
         transition-timing-function:ease-out;
     }
     #logo22 {
+        cursor:pointer;
         display:block;
         background-color: white;
         width: 32%;
