@@ -1,13 +1,13 @@
-.slider {
+.friendslider {
   position: absolute;
   width: 25%;
-  height: 51%;
-  margin-top:14%;
+  height: 43%;
+  margin-top:18%;
   background-color: rgba(0,0,0,0);
   left: -25%;
   transition-duration: 1s;
   text-align: center;
-  z-index: 4;
+  z-index: 2;
 }
 #yoursubscribedslider {
   font-family: 'Ubuntu';
@@ -27,20 +27,20 @@
   border:solid 1px #ed610c;
   border-radius: 20px;
 }
-.active {
+.activer {
   position: absolute;
   width: 25%;
-  height: 51%;
+  height: 43%;
   background-color: rgba(0,0,0,0.9);
   left:-0px;
   transition-duration: 1s;
   text-align: center;
-  z-index:6;
 }
-.toggle {
+.open {
   margin-left:0% !important;
   transition-duration:1s;
   border:none !important;
+
 }
 #notificationsr, #notificationfl {
   width: 10px;
@@ -51,7 +51,7 @@
   border-radius: 50%;
   background-color:#ed610c;
 }
-.radioactive{
+.superactive {
   font-family: 'Ubuntu';
   font-size: 1.2vw;
   color: #ffffff;
@@ -62,8 +62,8 @@
   width: 50%;
   border-top: 2px solid #ffffff;
   border-bottom: 2px solid #ffffff;
-  border-right: 2px solid #ffffff;
-  border-left: 2px solid #ffffff;
+  border-right: 2px solid #ffffff; 
+  border-left: 2px solid #ffffff;     
   cursor:pointer;
   transition-duration:1s;
 }

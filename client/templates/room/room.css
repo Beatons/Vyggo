@@ -32,7 +32,6 @@
   left: 10px; 
   cursor:pointer;  
 }
-
 #buttonwrraper {
   width: 40%;
   height: 20%;
@@ -217,6 +216,14 @@
 #videos {
   height: 100%;
   text-align:center;
+  width: 75%;
+  float:left;
+}
+.locoframe {
+  width:25%;
+  text-align:center;
+  height: 100%;
+  float:left;
 }
 video {
   height:96%;
@@ -225,6 +232,7 @@ video {
   margin: 0.25% auto 0 auto;
   border-radius: 1vw;
 }
+
 .videoFrame {
   text-align:center;
 }

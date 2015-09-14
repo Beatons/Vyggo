@@ -1,4 +1,6 @@
 <template name='room'>
+      {{> slider}}
+      {{> FriendSlider}}
   <div id="roomcontainer">
  
 
@@ -8,8 +10,7 @@
         <img id="profilepic" src="/dark/profile.png" />
         <div id='buttonwrraper'>
        
-          <div id="friendslist">Friends list<div id="notificationfl"></div>
-          </div>
+        
         </div>
       </div>
       <div id="roomfeedback">
@@ -71,12 +72,11 @@
     </div>
     
   <div id='wrapper'>
-    <div id="videos">
-      <div class="videoFrame">
+          <div class="locoframe">
       <video id="localVideo" controls='controls'>
       </video>
       </div>
-    
+    <div id="videos">
       </div>
     </div>
     
