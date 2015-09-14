@@ -1,0 +1,67 @@
+.slider {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  left: -312px;
+  transition-duration: 1s;
+  text-align: center;
+  z-index: 2;
+  border-right: 2px #ffffff solid;
+}
+#yoursubscribedslider {
+  font-family: 'Ubuntu';
+  font-size: 1.2vw;
+  color: #ed610c;
+  margin-top: 0%;
+}
+#subscribedsliderplus {
+  text-align:left;
+  float:right;	
+  margin-right: 20px;
+  font-family: 'Ubuntu';
+  color:white;
+  background-color: #ed610c;
+  padding: 2% 3%;
+  font-weight: bold;
+  border:solid 1px #ed610c;
+  border-radius: 20px;
+}
+.active {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  left:-0px;
+  transition-duration: 1s;
+  text-align: center;
+}
+.toggle {
+  margin-left:0%;
+  transition-duration:1s;
+  transition-delay: 0.5s;
+}
+#notificationsr, #notificationfl {
+  width: 10px;
+  border: 1px solid white;
+  height: 10px;
+  margin-left: 9%;
+  position:absolute;
+  border-radius: 50%;
+  background-color:#ed610c;
+}
+.radioactive, #friendslist {
+  font-family: 'Ubuntu';
+  font-size: 1.2vw;
+  color: #ffffff;
+  padding: 0.8vw 0;
+  background-color:rgba(0,0,0,0.5);
+  box-shadow: 2px 2px 2px #111111;
+  margin-top: 50%;
+  margin-left:100%;
+  width: 50%;
+  border-top: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;  
+  cursor:pointer;
+}

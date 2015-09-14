@@ -1,22 +1,25 @@
 <template name='room'>
   <div id="roomcontainer">
+ 
+
     <div id="roomleft">
       <div id="profileinfo">
         <img id="roomlogo" src="/dark/logo.png" />
         <img id="profilepic" src="/dark/profile.png" />
         <div id='buttonwrraper'>
-        <div id="subscribedrooms">Subscribed<div id="notificationsr"></div>
-          </div>
+       
           <div id="friendslist">Friends list<div id="notificationfl"></div>
           </div>
         </div>
       </div>
       <div id="roomfeedback">
+       <div id="roomfeedbackwrraper">
         <div id='feedtext'>Feedback</div>
         <form id='userfeedback'>
         <input name='feedback' id="feedbacktextbox" autocomplete='off' type='textbox' placeholder='Write any improvements or suggestions you have in mind' >
         <input type="submit" ID="feedbacksubmitbutton" value="Submit" />
       </form>
+       </div>
       </div>
       <div id='usercontrol'>
         <img id="xelophoneicon" src="/dark/xhelophone.png">

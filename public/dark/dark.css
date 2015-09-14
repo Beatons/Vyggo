@@ -53,11 +53,12 @@
 
     }
     #icons {
-        width:92%;
+        width:82.7%;
         height: 100%;
         position:relative;
         float:left;
         display:none;
+        margin-top: 1%;
     }
     .icon {
         margin-top: 2%;
@@ -68,11 +69,12 @@
         display:none;
     } 
     #iconsgreen{
-        width:92%;
+        width:82.7%;
         height: 100%;
         position:relative;
         float:left;
         display:block;
+        margin-left: 2%;
     }  
     .icongreen {
         margin-top: 2%;
@@ -111,13 +113,12 @@
         position: absolute;
         width: 100%;
         font-family: Ubuntu;
-        height: 45vw;
+        height: 50.5vw;
         text-align: left;
         font-weight: 600;
         z-index: -5;
         margin-top: 8%;
         transition-duration: 2s;
-      
     }
                                      /*text 1*/
     #amazing {
@@ -563,7 +564,6 @@
     #kenneths_maddness {
         width: 100%;
         height: auto;
-
         display:block;
     }
                                          /*container2*/
@@ -573,7 +573,7 @@
     display:inline-block;
     font-weight:600;
     transition-duration:0.3s;
-    margin: 0 10.4%;
+    margin: 0 10%;
     color: #33cc33;
 }
 

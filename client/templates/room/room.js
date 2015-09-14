@@ -19,3 +19,9 @@ Template.room.events({
 Template.room.helpers(function() {
 	
 });
+
+Template.room.events({
+	'click #subscribedrooms' : function(event) {
+		
+	}
+});
