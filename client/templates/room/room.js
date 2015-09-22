@@ -1,4 +1,6 @@
 Template.room.onRendered(function() {
+	
+	//if logged in
 	WebRTC.join(
 		Rooms.findOne()._id, 
 		'videoFrame', 
@@ -6,6 +8,8 @@ Template.room.onRendered(function() {
 		'textFrame', 
 		document.getElementById('messages')
 	);
+
+	//else, redirect back to home page
 });
 
 Template.room.events({
@@ -14,8 +18,4 @@ Template.room.events({
 			WebRTC.message(event.target.message.value);
 			event.target.message.value = '';
 		}
-});
-
-Template.room.helpers(function() {
-	
 });

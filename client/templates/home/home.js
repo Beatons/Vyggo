@@ -1,3 +1,16 @@
+var loginBeforeRoom = function(room) {
+    if(!Meteor.userId()) {
+        Meteor.loginWithFacebook({
+            loginStyle:'popup'},
+            function(){
+                if(Meteor.userId())
+                    return Router.go(room);
+                alert('you failed to authenticate, and will stay on the homepage');
+                Router.go('home');
+            });
+    }
+};
+
 Template.home.events({
     "submit #subscribe":function(event) {
         var fn = event.target.firstname;
@@ -34,14 +47,14 @@ Template.home.events({
     },
 
     "click #chat1":function(event) {
-        Router.go('/rooms/q&a');
+        loginBeforeRoom('/rooms/q&a');
     },
 
     "click #chat2":function(event) {
-        Router.go('/rooms/leagueoflegends');
+        loginBeforeRoom('/rooms/leagueoflegends');
     }, 
 
     "click #chat3":function(event) {
-        Router.go('/rooms/marvel');
+        loginBeforeRoom('/rooms/marvel');
     }
 });
