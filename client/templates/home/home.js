@@ -5,10 +5,10 @@ var loginBeforeRoom = function(room) {
             function(){
                 if(Meteor.userId())
                     return Router.go(room);
-                alert('you failed to authenticate, and will stay on the homepage');
                 Router.go('home');
             });
     }
+    Router.go(room);
 };
 
 Template.home.events({
