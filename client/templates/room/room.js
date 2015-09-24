@@ -23,3 +23,13 @@ Template.room.events({
 			event.target.message.value = '';
 		}
 });
+
+Template.room.helpers(function() {
+	
+});
+
+Template.room.events({
+	'click #subscribedrooms' : function(event) {
+		
+	}
+});

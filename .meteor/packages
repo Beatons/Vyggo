@@ -7,5 +7,6 @@
 meteor-platform
 iron:router
 msavin:mongol
+jquery
 accounts-facebook
 service-configuration

@@ -1,54 +1,99 @@
 #roomcontainer { 
   position:absolute;
   width:100%;
-  height:101%;
-  background-color:white;  
+  height:100%;
+  background-color:white;
+  overflow:hidden;  
 }
 #roomleft {
   width:25%;
   height:80%;
   float:left;
   position:static;
-
+  z-index:20;
 }
 #profileinfo {
   width:100%;
-  height:80%;
-  background-color:gray;
+  height:70%;
+  background-color:#222222;
   position:static;
-  float:left;
+  float: left;
   text-align:center;
 }
 #profilepic{
-  margin-top:2%;
+  margin-top: 2%;
+  cursor:pointer;
+}
+#roomlogo {
+  height: 8%;
+  width: auto;
+  position:absolute;
+  top: 10px;
+  left: 10px; 
+  cursor:pointer;  
+}
+#buttonwrraper {
+  width: 40%;
+  height: 20%;
+  margin-top: 5%;
+  padding: 4%;
+  float:left;
+  margin-right: 30%;
 }
 #roomfeedback {
   width:100%;
   height:20%;
-  background-color: #ed610c;
+  background-color: #181818;
   position:static;
   float:left;
-  text-align:center;
+}
+#roomfeedbackwrraper {
+  height: 95%;
+  width: 100%;
+}
+#feedbacktextbox {
+  width:85%;
+}
+#feedbacksubmitbutton {
+  width: 20%;
+  cursor:pointer;
 }
 #feedtext {
   font-family:'Ubuntu';
   font-size: 1.5vw;
   color:white;
-  margin-top: 2%;
+  margin-top: 1.8%;
+  margin-left: 4%;
 }
 #userfeedback input {
-  width: 60%;
   height: 60%;
-  margin-top: 2%;
+  margin-top: 1.8%;
   color:white;
   font-size: 0.8vw;
   font-family:'Ubuntu';
-  float:none; 
+  float: none; 
+  cursor: text;
+  margin-left: 4%;  
+}
+#usercontrol {
+  height:10%;
+  width: 100%;
+  float:left;
+  text-align:center;
+  background-color: #222222;
+}
+#xelophoneicon, #headphoneicon, #settingicon {
+  height: 60%;
+  width: auto;
+  float: right;
+  margin-top: 3%;
+  margin-right: 4%;
+  cursor:pointer;
 }
 #roommiddle {
-  width:50%;
-  height:80%;
-  float:left;
+  width: 50%;
+  height: 80%;
+  float: left;
   position:static;
 }
 #roominfo {
@@ -77,8 +122,9 @@
   color:white;
 }
 #roominforighttext {
-  margin-top:8%;
-  padding-left: 8%;
+  height:100%;
+  padding-top: 2%;
+  padding-left: 2%;
   color:white;
   border-left: 2px solid white;
 }
@@ -94,7 +140,6 @@
   height:80%;
   float:left;
   position:static;
-
 }
 #roomshare {
   border-left: solid 2px white;
@@ -106,60 +151,64 @@
   position:static; 
   font-family:'Ubuntu';
   font-size: 0.8vw;
-  text-align:center;
   color:white;
 }
 #roomcopyshare {
-  margin-top:2%;
+  margin-top: 3%;
+  margin-left: 2%;
+  font-size: 1.2vw;
 }
 #roomsharetext {
-  margin: 2% 5%;
+  margin-top: 3%;
+  margin-left: 2%;
 }
 #roomshareinput {
-  font-family:'Ubuntu';
-  font-size:1vw;
+  font-family: 'Ubuntu';
+  font-size: 1vw;
   color:white;
+  cursor: text;
+  width: 80%;
+  margin-top: 3%;
+  margin-left: 2%;
 }
 #userlist {
-  height:80%;
-  width:100%;
-
-  float:left;
-  position:static;
+  height: 80%;
+  width: 100%;
+  border-left: 2px solid #ed610c;
+  float: left;
+  position: static;
 }
 .username {
-  font-family:'Ubuntu';
-  font-size:0.8vw;
-  float:left;
-  margin-left:5%;
+  font-family: 'Ubuntu';
+  font-size: 0.8vw;
+  float: left;
+  margin-left: 2%;
   margin-top: 10%;
-  
 }
 .userlistpic {
   width: 20%;
-  height:auto;
-  float:right;
-  margin-top:10%;
-  margin-right: 5%;
+  height: auto;
+  float: right;
+  margin-top: 5%;
+  margin-right: 8.6%;
 }
 #userunorderedlist {
-  list-style-type:none;
-  width:100%;
-  height:100%;
-  padding:0;
-  margin:0;
-  overflow-y:scroll;
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
 }
 .uservolume {
   width: 5%;
-  height:auto;
-  margin-top:9.9%;
-  margin-left:2%;
-  
+  height: auto;
+  margin-top: 9.75%;
+  margin-left: 2%;
 }
 #userunorderedlist li {
-  height:20%;
-  float:left;
+  height: 20%;
+  float: left;
   width: 100%;
   background-color:white;
   border-bottom:2px #ed610c solid;
@@ -167,21 +216,30 @@
 #videos {
   height: 100%;
   text-align:center;
+  width: 75%;
+  float:left;
+}
+.locoframe {
+  width:25%;
+  text-align:center;
+  height: 100%;
+  float:left;
 }
 video {
-  height:100%;
+  height:96%;
   transition-duration: 1s;
   bottom:0;
-  margin: 0 auto;
+  margin: 0.25% auto 0 auto;
   border-radius: 1vw;
 }
+
 .videoFrame {
   text-align:center;
 }
 #wrapper {
   float:left;
   position:static;
-  background-color:#ed610c;
+  background-color:#222222;
   width:100%;
   height:20%;
 }
@@ -217,7 +275,6 @@ video {
   float:left;
   width:100%;
   height:100%;
-
 }
 form {
   margin:0;
@@ -226,37 +283,39 @@ form {
   margin:0;
   text-align:left;
   font-family:'Ubuntu';
-  width:100%;
-  height: 74%;
+  width:99%;
+  height: 72%;
   overflow-y: scroll;
   overflow-x: hidden;
-  border-bottom:2px solid white;
+  border-bottom:2px solid #ed610c;
   padding-left: 20px;
-  color:white;
-  background: rgba(50,50,50,0.8);
+  color:black;
+  background:none;
+  float:left;
+}
+#chatmiddle { 
+ width: 100%;
+ height: 100%;
+ text-align:center;
+ float:left;
+}
+#message input {
+  cursor:text;
 }
 #messages li {
   width:80%;
   font-size: 1vw;
   list-style-type: none;
-  margin: 5px; 
+  margin: 5px;
+  float:left; 
 }
-/*
-.textFrame {
-  bottom:0;
-  transform: scaleY(-1);
-  
-}
-#messages {
-  transform: scaleY(-1);
-  
-}*/
 #new-message input {
-  width: 100%;
+  width: 93%;
   font-size: 1vw;
-  padding: 1% 0;
-  background: rgba(50,50,50,0.8);
-  color:white;
-  margin:0;
-  border:none;
+  padding: 1% 0 1% 2%;
+  background:none;
+  color:black;
+  margin:0.7% 0 0 0;
+  border-radius: 5px;
+  border: 1px solid #ed610c;
 }
