@@ -12,6 +12,10 @@ Template.room.onRendered(function() {
 	//else, redirect back to home page
 });
 
+Template.room.onDestroyed(function() {
+	WebRTC.leave();
+})
+
 Template.room.events({
 	'submit #new-message': function(event) {
 			event.preventDefault();
