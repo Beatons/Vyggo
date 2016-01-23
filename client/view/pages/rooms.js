@@ -9,5 +9,9 @@ Template.rooms.onCreated(function() {
 Template.rooms.helpers({
 	rooms() {
 		return Rooms.find()
+	},
+
+	anyRooms() {
+		return Rooms.find().count()
 	}
 })

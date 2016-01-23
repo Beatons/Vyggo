@@ -1,8 +1,14 @@
 <template name='rooms'>
-	<h1 class='ui header'>Rooms</h1>
-	{{#each rooms}}
-		<div class='ui list'>
-			<div class='item'><a href='/rooms/{{name}}'>{{name}}</a></div>
-		</div>
-	{{/each}}
+	<div class='ui container animated slideInUp'>
+		<h1 class='ui header'>Rooms</h1>
+		{{#if anyRooms}}
+			{{#each rooms}}
+				<div class='ui list'>
+					<div class='item'><a href='/rooms/{{name}}'>{{name}}</a></div>
+				</div>
+			{{/each}}
+		{{else}}
+			<h5 class='ui header'>No Rooms Yet...</h5>
+		{{/if}}
+	</div>
 </template>

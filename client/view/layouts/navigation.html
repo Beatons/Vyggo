@@ -1,5 +1,5 @@
 <template name='navigation'>
-	<div class='ui menu'>
+	<div class='ui menu animated slideInDown'>
 		<a class='header item' href='{{routePath "home"}}' title='homepage'>
 			<h1>Vyggo</h1>
 		</a>
@@ -10,7 +10,5 @@
 
 		</div>
 	</div>
-	<div class='ui container'>
-		{{> Template.dynamic template=page}}
-	</div>
+	{{> Template.dynamic template=page}}
 </template>
