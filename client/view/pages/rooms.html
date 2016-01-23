@@ -1,0 +1,8 @@
+<template name='rooms'>
+	<h1 class='ui header'>Rooms</h1>
+	{{#each rooms}}
+		<div class='ui list'>
+			<div class='item'><a href='/rooms/{{name}}'>{{name}}</a></div>
+		</div>
+	{{/each}}
+</template>

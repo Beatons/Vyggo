@@ -1,15 +1,12 @@
-Meteor.publish("rooms.browse", function(){
-	return Rooms.find({}, {
-		sort:{
-			createdBy: -1
-		}
-	})
+import Rooms from '/common/imports/collections/rooms'
+
+Meteor.publish('rooms', function() {
+	return Rooms.find()
 })
 
-Meteor.publish("rooms.room", function(id){
-	if (!id)
+Meteor.publish('room', function(name) {
+	if(!name)
 		return this.ready()
-	
-	return Rooms.find(id)
-})
 
+	return Rooms.find({name})
+})

@@ -1,0 +1,16 @@
+<template name='navigation'>
+	<div class='ui menu'>
+		<a class='header item' href='{{routePath "home"}}' title='homepage'>
+			<h1>Vyggo</h1>
+		</a>
+		<a class='item' href='{{routePath "rooms"}}' title='rooms'>
+			Rooms
+		</a>
+		<div class='menu right'>
+
+		</div>
+	</div>
+	<div class='ui container'>
+		{{> Template.dynamic template=page}}
+	</div>
+</template>

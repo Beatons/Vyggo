@@ -1,1 +1,0 @@
-Template.registerHelper("formatDate", (date, format) => moment(date).format(format))

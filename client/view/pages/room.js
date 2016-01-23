@@ -1,25 +1,15 @@
-Template.room.onCreated(function(){
-	this.id = FlowRouter.getParam("id")
-	this.subscribe("rooms.room", this.id)
-})
+import Rooms from '/common/imports/collections/rooms'
 
-Template.room.onRendered(function(){
-	
-})
+Template.room.onCreated(function() {
+	this.state = new ReactiveDict()
 
-Template.room.onDestroyed(function(){
-	
-})
+	this.state.set('name',FlowRouter.getParam('name'))
 
-Template.room.events({
-
+	Meteor.subscribe('room', this.state.get('name'))
 })
 
 Template.room.helpers({
-	id(){
-		return Template.instance().id
-	},
-	room(){
-		return Rooms.findOne(Template.instance().id)
+	room() {
+		return Rooms.findOne({name:Template.instance().state.get('name')})
 	}
 })

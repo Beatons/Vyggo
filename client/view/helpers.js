@@ -1,0 +1,1 @@
+Template.registerHelper('routePath', name => name ? FlowRouter._routesMap[name] ? FlowRouter._routesMap[name].path : undefined : undefined)
