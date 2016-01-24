@@ -5,13 +5,11 @@ Meteor.methods({
 		if(!this.userId)
 			throw new Meteor.Error('unauthorized')
 
-		let room = {
+		Rooms.insert({
 			name:data.name,
 			createdBy:this.userId,
 			createdAt:Date.now()
-		}
-
-		Rooms.insert()
+		})
 	},
 
 	removeRoom(id) {
@@ -21,12 +19,10 @@ Meteor.methods({
 		if(!id)
 			throw new Meteor.Error('invalid id')
 
-		let myRoomSelector = {
-			_id:id,
+		Rooms.remove({
+			_id:id, 
 			createdBy:this.userId
-		}
-
-		Rooms.remove(myRoomSelector)
+		})
 	}
 })
 

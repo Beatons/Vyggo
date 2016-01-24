@@ -1,13 +1,24 @@
 <template name='navigation'>
-	<div class='ui menu animated slideInDown'>
-		<a class='header item' href='{{routePath "home"}}' title='homepage'>
-			<h1>Vyggo</h1>
-		</a>
-		<a class='item' href='{{routePath "rooms"}}' title='rooms'>
-			Rooms
-		</a>
-		<div class='menu right'>
-
+	<div class='animated slideInDown' id='navigation-menu-background'>
+		<div class='ui menu container' id='navigation-menu'>
+			<a class='header item' href='{{routePath "home"}}' title='home'>
+				<h1>
+					Vyggo
+				</h1>
+			</a>
+			<a class='item' href='{{routePath "rooms"}}' title='rooms'>
+				Browse
+			</a>
+			<div class='menu right'>
+				<div class='item' id='search-rooms-item'>
+					<form id='search-rooms-form'>
+	      				<div class='ui transparent icon input'>
+	        				<input id='search-rooms-input' name='search' placeholder='Find...' type='text'>
+	       					<i class='search link icon' id='search-rooms-submit'></i>
+	      				</div>
+      				</form>
+    			</div>
+			</div>
 		</div>
 	</div>
 	{{> Template.dynamic template=page}}

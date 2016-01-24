@@ -14,7 +14,7 @@ FlowRouter.route('/', {
 	}
 })
 
-let roomRoutes = FlowRouter.group({
+const roomRoutes = FlowRouter.group({
 	prefix:'/rooms',
 	name:'roomRoutes'
 })
