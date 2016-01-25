@@ -1,7 +1,7 @@
-Template.loginButton.events({
+Template.authButton.events({
 	'click #log-in'(e, t){
 		e.preventDefault()
-		$('#login-modal')
+		$('#auth-modal')
 		.modal({detachable: true})
 		.modal('show')
 	},
