@@ -10,6 +10,12 @@ Template.authModal.helpers({
 })
 
 Template.authModal.events({
+	'click #toggle-isSignup'(e, t) {
+		e.preventDefault()
+
+		t.state.set('isSignup', !t.state.get('isSignup'))
+	},
+
 	'submit #login-form'(e, t){
 		e.preventDefault()
 		
@@ -22,10 +28,12 @@ Template.authModal.events({
 
 			Meteor.logoutOtherClients()
 
-			$('#login-modal').modal('hide')
+			$('#auth-modal')
+				.modal({onHidden() { t.state.set('isSignup', false) }})
+				.modal('hide')
 		})
 	},
-	{
+
 	'submit #signup-form'(e, t){
 		e.preventDefault()
 		
@@ -43,7 +51,9 @@ Template.authModal.events({
 
 			Meteor.logoutOtherClients()
 
-			$('#login-modal').modal('hide')
+			$('#auth-modal')
+				.modal({onHidden() { t.state.set('isSignup', false) }})
+				.modal('hide')
 		})
 	}
 })

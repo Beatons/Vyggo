@@ -1,22 +1,35 @@
 <template name='authModal'>
 	<div class='header'>
 		<h2 class="ui inverted center aligned icon header">
-		  <i class="sign in icon"></i>
-		  Login
+		  <i class="{{#if isSignup}}add user{{else}}sign in{{/if}} icon"></i>
+		  {{#if isSignup}}Sign Up{{else}}Login{{/if}}
 		</h2>
 	</div>
 	<div class='content'>
 		<form class='ui form' id='{{#if isSignup}}signup{{else}}login{{/if}}-form'>
+			{{#if isSignup}}
+				<div class='field'>
+					<input type='email' name='email' placeholder='email...'>
+				</div>		
+			{{/if}}
 			<div class='two fields'>
 				<div class='field'>
-					<input type='text' name='identity' placeholder='username or email...'>
+					<input type='text' name='{{#if isSignup}}username{{else}}identity{{/if}}' placeholder='username{{#unless isSignup}} or email...{{/unless}}'>
 				</div>
 				<div class='field'>
 					<input type='password' name='password' placeholder='password...'>
 				</div>
 			</div>
+			{{#if isSignup}}
+				<div class='field'>
+					<input type='password' name='confirm' placeholder='confirm password...'>
+				</div>		
+			{{/if}}
 			<div class='field'>
-				<button class='fluid positive ui button' type='submit'>Login</button>
+				<button class='fluid positive ui button' type='submit'>{{#if isSignup}}Sign Up{{else}}Login{{/if}}</button>
+			</div>
+			<div class='field'>
+				<button class='ui fluid inverted basic button' id='toggle-isSignup'>{{#if isSignup}}already have a user?{{else}}don't have a user yet?{{/if}}</button>
 			</div>
 		</form>
 	</div>
