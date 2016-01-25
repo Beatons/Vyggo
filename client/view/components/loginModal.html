@@ -1,26 +1,23 @@
 <template name='loginModal'>
-	<div class='ui basic modal' id='login-modal'>
-		<div class='header'>
-			<h2 class="ui inverted center aligned icon header">
-			  <i class="sign in icon"></i>
-			  Login
-			</h2>
-		</div>
-
-		<div class='content'>
-			<div class='ui form' id='login-form'>
-				<div class='two fields'>
-					<div class='field'>
-						<input type='text' id='identity' placeholder='username or email...'>
-					</div>
-					<div class='field'>
-						<input type='password' id='password' placeholder='password...'>
-					</div>
+	<div class='header'>
+		<h2 class="ui inverted center aligned icon header">
+		  <i class="sign in icon"></i>
+		  Login
+		</h2>
+	</div>
+	<div class='content'>
+		<form class='ui form' id='login-form'>
+			<div class='two fields'>
+				<div class='field'>
+					<input type='text' name='identity' placeholder='username or email...'>
 				</div>
 				<div class='field'>
-					<input class='fluid positive ui button' type='submit' value='Login'>
+					<input type='password' name='password' placeholder='password...'>
 				</div>
 			</div>
-		</div>
+			<div class='field'>
+				<button class='fluid positive ui button' type='submit'>Login</button>
+			</div>
+		</form>
 	</div>
 </template>
