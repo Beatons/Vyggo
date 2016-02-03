@@ -5,7 +5,7 @@ Template.room.onCreated(function() {
 
 	this.state.set('name',FlowRouter.getParam('name'))
 
-	Meteor.subscribe('room', this.state.get('name'))
+	this.subscribe('room', this.state.get('name'))
 })
 
 Template.room.helpers({

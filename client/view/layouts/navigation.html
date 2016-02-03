@@ -9,6 +9,11 @@
 			<a class='item' href='{{routePath "rooms"}}' title='rooms'>
 				Browse
 			</a>
+			{{#if currentUser}}
+				<a class='item' id='create-room' title='new room'>
+					New Room
+				</a>
+			{{/if}}
 			<div class='menu right'>
 				{{> authButton}}
 				<div class='item' id='search-rooms-item'>

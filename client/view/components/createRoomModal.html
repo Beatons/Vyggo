@@ -1,0 +1,21 @@
+<template name='createRoomModal'>
+	<div class='header'>
+		<h2 class="ui inverted center aligned icon header">
+		  <i class="add icon"></i>
+		  New Room
+		</h2>
+	</div>
+	<div class='content'>
+		<form class='ui form' id='create-room-form'>
+			<div class='field'>
+				<input type='text' name='name' placeholder='Name...'>
+			</div>
+			<div class='field'>
+				<input type='number' min=1 max=20 name='threshold' placeholder='Highest Amount Of Visitors...'>
+			</div>
+			<div class='field'>
+				<button class='fluid positive ui button' type='submit'>Create Room</button>
+			</div>
+		</form>
+	</div>
+</template>

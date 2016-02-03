@@ -9,6 +9,17 @@ Template.navigation.events({
 		t.$('#search-rooms-form').submit()
 	},
 
+	'click #create-room'(e, t) {
+		e.preventDefault()
+
+		$('#create-room-modal')
+		.modal({
+			detachable: true,
+			transition:'slide right'
+		})
+		.modal('show')
+	},
+
 	'submit #search-rooms-form'(e,t){
 		e.preventDefault()
 
