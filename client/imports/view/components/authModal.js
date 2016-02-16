@@ -1,3 +1,5 @@
+import './authModal.html'
+
 Template.authModal.onCreated(function(){
 	this.state = new ReactiveDict()
 	this.state.set('isSignup', false)

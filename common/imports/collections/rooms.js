@@ -1,4 +1,4 @@
-const Rooms = new Mongo.Collection('rooms')
+export default Rooms = new Mongo.Collection('rooms')
 
 Meteor.methods({
 	insertRoom(data) {
@@ -8,7 +8,9 @@ Meteor.methods({
 		Rooms.insert({
 			name:data.name,
 			createdBy:this.userId,
-			createdAt:Date.now()
+			createdAt:Date.now(),
+			viewerCount:0,
+			users:[]
 		})
 	},
 
@@ -25,5 +27,3 @@ Meteor.methods({
 		})
 	}
 })
-
-export default Rooms

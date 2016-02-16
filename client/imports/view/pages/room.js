@@ -1,4 +1,6 @@
-import Rooms from '/common/imports/collections/rooms'
+import './room.html'
+
+import Rooms from '/common/imports/collections/rooms.js'
 
 Template.room.onCreated(function() {
 	this.state = new ReactiveDict()
@@ -9,7 +11,9 @@ Template.room.onCreated(function() {
 
 	this.autorun(()=> {
 		const room = Rooms.findOne()
-		this.subscribe("room.users", room.users)
+
+		if(room && room.users && room.users.length)
+			this.subscribe("room.users", room.users)
 	})
 })
 
@@ -20,5 +24,4 @@ Template.room.helpers({
 	users() {
 		return Meteor.users.find()
 	}
-
 })

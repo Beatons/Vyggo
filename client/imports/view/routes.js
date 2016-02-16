@@ -1,3 +1,9 @@
+import './layouts/navigation.js'
+import './pages/notFound.js'
+import './pages/home.js'
+import './pages/rooms.js'
+import './pages/room.js'
+
 BlazeLayout.setRoot('body')
 
 FlowRouter.notFound = {

@@ -1,3 +1,5 @@
+import './authButton.html'
+
 Template.authButton.events({
 	'click #log-in'(e, t){
 		e.preventDefault()

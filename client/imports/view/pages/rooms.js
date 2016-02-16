@@ -1,4 +1,6 @@
-import Rooms from '/common/imports/collections/rooms'
+import './rooms.html'
+
+import Rooms from '/common/imports/collections/rooms.js'
 
 Template.rooms.onCreated(function() {
 	this.state = new ReactiveDict()

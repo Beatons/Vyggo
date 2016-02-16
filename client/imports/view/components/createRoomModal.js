@@ -1,3 +1,5 @@
+import './createRoomModal.html'
+
 Template.createRoomModal.events({
 	'submit #create-room-form'(e, t) {
 		e.preventDefault()

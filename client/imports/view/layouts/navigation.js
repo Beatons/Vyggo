@@ -1,3 +1,8 @@
+import './navigation.html'
+import './navigation.css'
+
+import './navigation/authButton.js'
+
 Template.navigation.events({
 	'click #search-rooms-item'(e,t){
 		e.preventDefault()

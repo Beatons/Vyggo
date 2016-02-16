@@ -1,0 +1,21 @@
+{
+  "name": "vyggo",
+  "version": "1.0.0",
+  "description": "A platform for sharing enthusiasm about various subjects",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "meteor",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beatons/Vyggo.git"
+  },
+  "author": "Beatons",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Beatons/Vyggo/issues"
+  },
+  "homepage": "https://github.com/Beatons/Vyggo#readme"
+}
