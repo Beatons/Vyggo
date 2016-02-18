@@ -1,3 +1,5 @@
+import { Meteor } from 'meteor/meteor'
+
 import Rooms from '/common/imports/collections/rooms'
 
 Rooms._ensureIndex({name:1}, {unique:1})

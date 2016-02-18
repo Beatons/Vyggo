@@ -1,4 +1,7 @@
 import './createRoomModal.html'
+import { Meteor } from 'meteor/meteor'
+import { FlowRouter } from 'meteor/kadira:flow-router'
+//import { Template } from 'meteor/blaze-html-templates' <- DOESN'T WORK...
 
 Template.createRoomModal.events({
 	'submit #create-room-form'(e, t) {

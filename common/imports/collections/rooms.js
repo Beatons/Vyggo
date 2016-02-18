@@ -1,3 +1,6 @@
+import { Mongo } from 'meteor/mongo'
+import { Meteor } from 'meteor/meteor'
+
 export default Rooms = new Mongo.Collection('rooms')
 
 Meteor.methods({

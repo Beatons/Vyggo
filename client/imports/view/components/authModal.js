@@ -1,4 +1,9 @@
 import './authModal.html'
+import { Meteor } from 'meteor/meteor'
+import { ReactiveDict } from 'meteor/reactive-dict'
+import { Accounts } from 'meteor/accounts-password'
+//import { Template } from 'meteor/blaze-html-templates' <- DOESN'T WORK...
+
 
 Template.authModal.onCreated(function(){
 	this.state = new ReactiveDict()

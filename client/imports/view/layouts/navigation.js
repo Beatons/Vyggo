@@ -3,6 +3,9 @@ import './navigation.css'
 
 import './navigation/authButton.js'
 
+//import { Template } from 'meteor/blaze-html-templates' <- DOESN'T WORK...
+
+
 Template.navigation.events({
 	'click #search-rooms-item'(e,t){
 		e.preventDefault()

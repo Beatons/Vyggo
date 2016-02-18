@@ -1,11 +1,12 @@
 import './rooms.html'
-
+//import { Template } from 'meteor/blaze-html-templates' <- DOESN'T WORK...
+import { ReactiveDict } from 'meteor/reactive-dict'
 import Rooms from '/common/imports/collections/rooms.js'
 
 Template.rooms.onCreated(function() {
 	this.state = new ReactiveDict()
 
-	Meteor.subscribe('rooms')
+	this.subscribe('rooms')
 })
 
 Template.rooms.helpers({
