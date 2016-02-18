@@ -45,6 +45,10 @@ Template.room.helpers({
 	room_users_data() {
 		const 	room = Rooms.findOne({}, {fields:{threshold:1, users:1}}),
 				usernames = Meteor.users.find().fetch().map(user => user.username)
+
+		if(!room || !usernames)
+			return {usernames:[], threshold:'?', userCount:'?'}
+
 		return { usernames, threshold:room.threshold, userCount:room.users.length }
 	}
 })
