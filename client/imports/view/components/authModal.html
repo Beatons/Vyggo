@@ -10,7 +10,7 @@
 			{{#if isSignup}}
 				<div class='field'>
 					<input type='email' name='email' placeholder='email...'>
-				</div>		
+				</div>
 			{{/if}}
 			<div class='two fields'>
 				<div class='field'>
@@ -23,7 +23,7 @@
 			{{#if isSignup}}
 				<div class='field'>
 					<input type='password' name='confirm' placeholder='confirm password...'>
-				</div>		
+				</div>
 			{{/if}}
 			<div class='field'>
 				<button class='fluid positive ui button' type='submit'>{{#if isSignup}}Sign Up{{else}}Login{{/if}}</button>
@@ -32,5 +32,6 @@
 				<button class='ui fluid inverted basic button' id='toggle-isSignup'>{{#if isSignup}}already have a user?{{else}}don't have a user yet?{{/if}}</button>
 			</div>
 		</form>
+		{{>message type='negative' key='authModal'}}
 	</div>
 </template>

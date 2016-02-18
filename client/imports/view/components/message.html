@@ -1,0 +1,11 @@
+<template name="message">
+    {{#if message}}
+        <div class="ui {{type}} message animated fadeInDown">
+            <i class="close icon"></i>
+            <div class="header">
+                {{message.content}}
+            </div>
+            <p>{{message.details}}</p>
+        </div>
+    {{/if}}
+</template>

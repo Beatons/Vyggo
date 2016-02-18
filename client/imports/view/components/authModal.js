@@ -1,6 +1,7 @@
 import './authModal.html'
 import { Meteor } from 'meteor/meteor'
 import { ReactiveDict } from 'meteor/reactive-dict'
+import './message.js'
 //import { Accounts } from 'meteor/accounts-password'
 //import { Template } from 'meteor/blaze-html-templates' <- DOESN'T WORK...
 
@@ -19,19 +20,20 @@ Template.authModal.helpers({
 Template.authModal.events({
 	'click #toggle-isSignup'(e, t) {
 		e.preventDefault()
-
+		Session.set('authModal', undefined)
 		t.state.set('isSignup', !t.state.get('isSignup'))
 	},
 
 	'submit #login-form'(e, t){
 		e.preventDefault()
-		
+
 		let identity = e.target.identity,
 			password = e.target.password
 
 		Meteor.loginWithPassword(identity.value, password.value, error => {
+			Session.set('authModal', error ? {content: error.reason, details: error.details} : undefined)
 			if(error)
-				return console.log(error)
+				return
 
 			Meteor.logoutOtherClients()
 
@@ -43,7 +45,7 @@ Template.authModal.events({
 
 	'submit #signup-form'(e, t){
 		e.preventDefault()
-		
+
 		let username 	= e.target.username,
 			email		= e.target.email,
 			password 	= e.target.password,
@@ -53,8 +55,9 @@ Template.authModal.events({
 				return console.log(new Meteor.Error("passwords don't match"))
 
 		Accounts.createUser({username: username.value, email: email.value, password: password.value}, error => {
+			Session.set('authModal', error ? {content: error.reason, details: error.details} : undefined)
 			if(error)
-				return console.log(error)
+				return
 
 			Meteor.logoutOtherClients()
 

@@ -11,8 +11,9 @@ Template.createRoomModal.events({
 			threshold 	= e.target.threshold
 
 		Meteor.call('insertRoom', {name:name.value, threshold:threshold.value}, error => {
+			Session.set('createRoomModal', error ? {content: error.error} : undefined)
 			if(error)
-				return console.log(error)
+				return
 
 			$('#create-room-modal').modal('hide')
 
