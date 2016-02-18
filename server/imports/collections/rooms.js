@@ -12,15 +12,17 @@ Meteor.publish('room', function(name) {
 	if(!name)
 		return this.ready()
 
-
 	if(this.userId) {
-		Rooms.update({name, users:{$nin:[this.userId]}}, {$push:{users:this.userId}})
-		this.onStop(() => Rooms.update({name}, {$pull:{users:this.userId}}))
-	}
-	else {
-		Rooms.update({name}, {$inc:{viewerCount:1}})
-		this.onStop(() => Rooms.update({name}, {$inc:{viewerCount:-1}}))
-	}
 
-	return Rooms.find({name})
+		
+
+		Rooms.update({name, users:{$nin:[this.userId]}, $where: "this.users.length < this.threshold"}, {$push:{users:this.userId}})
+		this.onStop(() => Rooms.update({name, users:{$in:[this.userId]}}, {$pull:{users:this.userId}}))
+
+		return Rooms.find({name, users:{$in:[this.userId]}})
+	}
+	else 
+		return Rooms.find({name})
 })
+
+Meteor.startup(() => Rooms.update({users:{$not:{$size:0}}}, {$set:{users:[]}}))

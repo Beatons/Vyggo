@@ -4,6 +4,7 @@ import { ReactiveDict } from 'meteor/reactive-dict'
 import { FlowRouter } from 'meteor/kadira:flow-router'
 import Rooms from '/common/imports/collections/rooms.js'
 //import { Template } from 'meteor/blaze-html-templates' <- DOESN'T WORK...
+import '../components/loading.js'
 
 Template.room.onCreated(function() {
 	this.state = new ReactiveDict()

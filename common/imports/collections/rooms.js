@@ -10,9 +10,9 @@ Meteor.methods({
 
 		Rooms.insert({
 			name:data.name,
+			threshold:data.threshold,
 			createdBy:this.userId,
 			createdAt:Date.now(),
-			viewerCount:0,
 			users:[]
 		})
 	},
@@ -25,7 +25,7 @@ Meteor.methods({
 			throw new Meteor.Error('invalid id')
 
 		Rooms.remove({
-			_id:id, 
+			_id:id,
 			createdBy:this.userId
 		})
 	}

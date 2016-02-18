@@ -1,16 +1,23 @@
 <template name='room'>
-	<div class='ui container animated slideInUp'>
-		<div class='ui right floated compact vertical menu animated slideInUp'>
-			<div class='header item animated fadeIn'>
-				Users
-			</div>
-			{{#each users}}
-				<div class='item animated fadeIn'>
-					{{username}}
+	{{#if room}}
+		<div class='ui container animated slideInUp'>
+			<div class='ui right floated compact vertical menu animated slideInUp'>
+				<div class='header item animated fadeIn'>
+					Users
 				</div>
-			{{/each}}
-			<div class='header item'>Viewers {{room.viewerCount}}</div>
+				{{#each users}}
+					<div class='item animated fadeIn'>
+						{{username}}
+					</div>
+				{{/each}}
+			</div>
+			<h1 class='ui header'>{{room.name}}</h1>
 		</div>
-		<h1 class='ui header'>{{room.name}}</h1>
-	</div>
+	{{else}}
+		{{#if Template.subscriptionsReady}}
+			{{> notFound content='Room'}}
+		{{else}}
+			{{> loading}}
+		{{/if}}
+	{{/if}}
 </template>
