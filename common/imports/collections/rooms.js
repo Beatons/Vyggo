@@ -28,5 +28,12 @@ Meteor.methods({
 			_id:id,
 			createdBy:this.userId
 		})
+	},
+
+	getReason(name) {
+		
+		const room = Rooms.findOne({name})
+
+		return room ? room.threshold>room.users.length ? undefined  : 'Room Full' : 'Room Not Found'
 	}
 })

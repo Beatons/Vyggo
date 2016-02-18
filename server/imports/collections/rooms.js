@@ -14,11 +14,13 @@ Meteor.publish('room', function(name) {
 
 	if(this.userId) {
 
-		
-
-		Rooms.update({name, users:{$nin:[this.userId]}, $where: "this.users.length < this.threshold"}, {$push:{users:this.userId}})
+		/**
+			$where is not reactive,
+			and should be refactored
+			eventually...
+		**/
+		Rooms.update({name, users:{$nin:[this.userId]}, $where:"this.users.length < this.threshold"}, {$push:{users:this.userId}})
 		this.onStop(() => Rooms.update({name, users:{$in:[this.userId]}}, {$pull:{users:this.userId}}))
-
 		return Rooms.find({name, users:{$in:[this.userId]}})
 	}
 	else 

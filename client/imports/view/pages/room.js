@@ -4,7 +4,9 @@ import { ReactiveDict } from 'meteor/reactive-dict'
 import { FlowRouter } from 'meteor/kadira:flow-router'
 import Rooms from '/common/imports/collections/rooms.js'
 //import { Template } from 'meteor/blaze-html-templates' <- DOESN'T WORK...
-import '../components/loading.js'
+import '../components/banner.js'
+
+import './room/room_users.js'
 
 Template.room.onCreated(function() {
 	this.state = new ReactiveDict()
@@ -15,6 +17,13 @@ Template.room.onCreated(function() {
 
 	this.autorun(()=> {
 		const room = Rooms.findOne()
+
+		if(!room)
+			Meteor.call('getReason', this.state.get('name'), (error, reason) => {
+				error ? console.log(error) : this.state.set('reason', reason)
+			})
+		else
+			this.state.set('reason', undefined)
 
 		if(room && room.users && room.users.length)
 			this.subscribe("room.users", room.users)
@@ -27,5 +36,15 @@ Template.room.helpers({
 	},
 	users() {
 		return Meteor.users.find()
+	},
+
+	reason() {
+		return Template.instance().state.get('reason')
+	},
+
+	room_users_data() {
+		const 	room = Rooms.findOne({}, {fields:{threshold:1, users:1}}),
+				usernames = Meteor.users.find().fetch().map(user => user.username)
+		return { usernames, threshold:room.threshold, userCount:room.users.length }
 	}
 })

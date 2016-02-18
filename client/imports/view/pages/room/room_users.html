@@ -1,0 +1,12 @@
+<template name='room_users'>
+	<div class='ui right floated compact vertical menu animated slideInUp'>
+		<div class='header item animated fadeIn'>
+			{{counter}}
+		</div>
+		{{#each this.usernames}}
+			<div class='item animated fadeIn'>
+				{{this}}
+			</div>
+		{{/each}}
+	</div>
+</template>
