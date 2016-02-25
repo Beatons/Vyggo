@@ -1,10 +1,13 @@
 <template name='room'>
 	{{#if room}}
-		<div class='ui container animated slideInUp'>
+		<div class='ui fluid container animated slideInUp'>
+			{{> room_controls}}
 			{{#with room_users_data}}
 				{{> room_users}}
 			{{/with}}
-			<h1 class='ui header'>{{room.name}}</h1>
+			<div class='ui container'>
+				<h1 class='ui header'>{{room.name}}</h1>
+			</div>
 		</div>
 	{{else}}
 		{{#if Template.subscriptionsReady}}

@@ -5,8 +5,8 @@ import { FlowRouter } from 'meteor/kadira:flow-router'
 import Rooms from '/common/imports/collections/rooms.js'
 //import { Template } from 'meteor/blaze-html-templates' <- DOESN'T WORK...
 import '../components/banner.js'
-
 import './room/room_users.js'
+import './room/room_controls.js'
 
 Template.room.onCreated(function() {
 	this.state = new ReactiveDict()
