@@ -11,9 +11,11 @@ import './room/room_users.js'
 Template.room.onCreated(function() {
 	this.state = new ReactiveDict()
 
-	this.state.set('name',FlowRouter.getParam('name'))
-
-	this.subscribe('room', this.state.get('name'))
+	this.autorun(() => {
+		FlowRouter.watchPathChange()
+		this.state.set('name',FlowRouter.getParam('name'))
+		this.subscribe('room', this.state.get('name'))
+	})
 
 	this.autorun(()=> {
 		const room = Rooms.findOne()
