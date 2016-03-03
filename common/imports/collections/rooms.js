@@ -1,5 +1,6 @@
 import { Mongo } from 'meteor/mongo'
 import { Meteor } from 'meteor/meteor'
+import { Random } from 'meteor/random'
 
 export default Rooms = new Mongo.Collection('rooms')
 
@@ -47,17 +48,26 @@ Meteor.methods({
 		return room ? room.threshold>room.users.length ? undefined  : 'Room Full' : 'Room Not Found'
 	},
 
-	addComponent(id) {
+	addComponent(roomId) {
 		throwOnserver(!this.userId, 'unauthorized')
-		throwOnserver(!id, 'invalid id')
+		throwOnserver(!roomId, 'invalid id')
 
 		const component = {
-			x: 200,
-			y: 200,
+			_id: Random.id(),
+			x: 0,
+			y: 0,
 			createdAt: Date.now(),
 			createdBy: this.userId
 		}
 
-		Rooms.update({_id: id, createdBy: this.userId}, { $push: { components: component}})
+		Rooms.update({_id: roomId, createdBy: this.userId}, { $push: { components: component}})
+	},
+
+	removeComponent(roomId, componentId) {
+		throwOnserver(!this.userId, 'unauthorized')
+		throwOnserver(!roomId, 'invalid roomId')
+		throwOnserver(!componentId, 'invalid componentId')
+
+		Rooms.update({_id: roomId, createdBy: this.userId}, {$pull:{ components:{_id: componentId}}})
 	}
 })

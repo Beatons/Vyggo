@@ -63,4 +63,15 @@ Template.room.helpers({
 		return { roomId: Template.instance().state.get('roomId')}
 	},
 
+	room_components_data() {
+
+		const room = Rooms.findOne({name:Template.instance().state.get('name')})
+
+		if(!room || !room.components.length)
+			return []
+
+		room.components.forEach(component => component.roomId = room._id)
+
+		return room.components
+	}
 })

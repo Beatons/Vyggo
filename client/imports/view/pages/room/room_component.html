@@ -1,7 +1,8 @@
 <template name='room_component'>
     <div class="component" style='left:{{x}}px; top:{{y}}px'>
         <div class="ui compact segment">
-            TESTERINO
+            {{> Template.dynamic content=type}}
+            <i class='close link icon remove-component'></i>
         </div>
     </div>
 </template>

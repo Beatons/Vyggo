@@ -1,15 +1,17 @@
 <template name='room'>
 	{{#if room}}
 		<div class='ui fluid container animated slideInUp'>
-			{{#with room_controls_data}}
-				{{> room_controls}}
-			{{/with}}
+			{{#if equals room.createdBy currentUser._id}}
+				{{#with room_controls_data}}
+					{{> room_controls}}
+				{{/with}}
+			{{/if}}
 			{{#with room_users_data}}
 				{{> room_users}}
 			{{/with}}
 			<div class='ui container'>
 				<h1 class='ui header'>{{room.name}}</h1>
-				{{#each room.components}}
+				{{#each room_components_data}}
 					{{>room_component}}
 				{{/each}}
 				{{>message type='negative' key='room'}}
