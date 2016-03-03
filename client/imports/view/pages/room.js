@@ -1,4 +1,5 @@
 import './room.html'
+import './room.css'
 import { Meteor } from 'meteor/meteor'
 import { ReactiveDict } from 'meteor/reactive-dict'
 import { FlowRouter } from 'meteor/kadira:flow-router'
@@ -7,6 +8,7 @@ import Rooms from '/common/imports/collections/rooms.js'
 import '../components/banner.js'
 import './room/room_users.js'
 import './room/room_controls.js'
+import './room/room_component.js'
 
 Template.room.onCreated(function() {
 	this.state = new ReactiveDict()
@@ -21,11 +23,14 @@ Template.room.onCreated(function() {
 		const room = Rooms.findOne()
 
 		if(!room)
-			Meteor.call('getReason', this.state.get('name'), (error, reason) => {
-				error ? console.log(error) : this.state.set('reason', reason)
+			Meteor.call('getReasonUnavailable', this.state.get('name'), (error, reason) => {
+				error ? console.log(error) : this.state.set('reasonUnavailable', reason)
 			})
 		else
+		{
 			this.state.set('reason', undefined)
+			this.state.set('roomId', room._id)
+		}
 
 		if(room && room.users && room.users.length)
 			this.subscribe("room.users", room.users)
@@ -40,8 +45,8 @@ Template.room.helpers({
 		return Meteor.users.find()
 	},
 
-	reason() {
-		return Template.instance().state.get('reason')
+	reasonUnavailable() {
+		return Template.instance().state.get('reasonUnavailable')
 	},
 
 	room_users_data() {
@@ -52,5 +57,10 @@ Template.room.helpers({
 			return {usernames:[], threshold:'?', userCount:'?'}
 
 		return { usernames, threshold:room.threshold, userCount:room.users.length }
-	}
+	},
+
+	room_controls_data() {
+		return { roomId: Template.instance().state.get('roomId')}
+	},
+
 })

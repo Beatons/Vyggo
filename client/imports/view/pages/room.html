@@ -1,18 +1,24 @@
 <template name='room'>
 	{{#if room}}
 		<div class='ui fluid container animated slideInUp'>
-			{{> room_controls}}
+			{{#with room_controls_data}}
+				{{> room_controls}}
+			{{/with}}
 			{{#with room_users_data}}
 				{{> room_users}}
 			{{/with}}
 			<div class='ui container'>
 				<h1 class='ui header'>{{room.name}}</h1>
+				{{#each room.components}}
+					{{>room_component}}
+				{{/each}}
+				{{>message type='negative' key='room'}}
 			</div>
 		</div>
 	{{else}}
 		{{#if Template.subscriptionsReady}}
-			{{#if reason}}
-				{{> banner icon='warning sign icon' content=reason}}
+			{{#if reasonUnavailable}}
+				{{> banner icon='warning sign icon' content=reasonUnavailable}}
 			{{/if}}
 		{{else}}
 			{{> banner icon='yellow notched circle loading icon' content='Loading...'}}

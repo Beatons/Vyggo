@@ -25,13 +25,13 @@ Meteor.methods({
 			threshold:data.threshold,
 			createdBy:this.userId,
 			createdAt:Date.now(),
-			users:[]
+			users:[],
+			components:[]
 		})
 	},
 
 	removeRoom(id) {
 		throwOnserver(!this.userId, 'unauthorized')
-
 		throwOnserver(!id, 'invalid id')
 
 		Rooms.remove({
@@ -40,10 +40,24 @@ Meteor.methods({
 		})
 	},
 
-	getReason(name) {
+	getReasonUnavailable(name) {
 
 		const room = Rooms.findOne({name})
 
 		return room ? room.threshold>room.users.length ? undefined  : 'Room Full' : 'Room Not Found'
+	},
+
+	addComponent(id) {
+		throwOnserver(!this.userId, 'unauthorized')
+		throwOnserver(!id, 'invalid id')
+
+		const component = {
+			x: 200,
+			y: 200,
+			createdAt: Date.now(),
+			createdBy: this.userId
+		}
+
+		Rooms.update({_id: id, createdBy: this.userId}, { $push: { components: component}})
 	}
 })
