@@ -69,5 +69,22 @@ Meteor.methods({
 		throwOnserver(!componentId, 'invalid componentId')
 
 		Rooms.update({_id: roomId, createdBy: this.userId}, {$pull:{ components:{_id: componentId}}})
+	},
+
+	moveComponent(roomId, componentId, x, y) {
+		throwOnserver(!this.userId, 'unauthorized')
+		throwOnserver(!roomId, 'invalid roomId')
+		throwOnserver(!componentId, 'invalid componentId')
+
+		Rooms.update({
+			_id: roomId, 
+			createdBy: this.userId, 
+			'components._id': componentId
+			}, {
+			$set: {
+				'components.$.x':x,
+				'components.$.y':y
+			}
+		})
 	}
 })

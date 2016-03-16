@@ -1,0 +1,7 @@
+.component {
+    position: absolute;
+}
+
+#board {
+	position:relative;
+}

@@ -11,9 +11,11 @@
 			{{/with}}
 			<div class='ui container'>
 				<h1 class='ui header'>{{room.name}}</h1>
-				{{#each room_components_data}}
-					{{>room_component}}
-				{{/each}}
+				<div id='board'>
+					{{#each room_components_data}}
+						{{>room_component}}
+					{{/each}}
+				</div>
 				{{>message type='negative' key='room'}}
 			</div>
 		</div>

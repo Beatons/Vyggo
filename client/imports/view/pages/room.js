@@ -1,5 +1,4 @@
 import './room.html'
-import './room.css'
 import { Meteor } from 'meteor/meteor'
 import { ReactiveDict } from 'meteor/reactive-dict'
 import { FlowRouter } from 'meteor/kadira:flow-router'

@@ -1,8 +1,11 @@
 <template name='room_component'>
-    <div class="component" style='left:{{x}}px; top:{{y}}px'>
+    <div class="component" id='{{_id}}' style='left:{{x}}px; top:{{y}}px'>
         <div class="ui compact segment">
-            {{> Template.dynamic content=type}}
-            <i class='close link icon remove-component'></i>
+            <!-- 	{{> Template.dynamic content=type}} 	-->
+            {{#if equals createdBy currentUser._id}}
+            	<i class='close link icon remove-component'></i>
+            	<i class='move link icon move-component'></i>
+            {{/if}}
         </div>
     </div>
 </template>
