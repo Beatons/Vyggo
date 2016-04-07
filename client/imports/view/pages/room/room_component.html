@@ -1,11 +1,14 @@
 <template name='room_component'>
-    <div class="component" id='{{_id}}' style='left:{{position.x}}px; top:{{position.y}}px'>
-        <div class="ui compact segment">
-            <!-- 	{{> Template.dynamic content=type}} 	-->
-            {{#if equals createdBy currentUser._id}}
-            	<i class='close link icon remove-component'></i>
-            	<i class='move link icon move-component'></i>
+    <div class='component' id='{{_id}}' style='left:{{position.x}}px; top:{{position.y}}px'>
+        <div class='ui compact segment'>
+        	{{#if equals createdBy currentUser._id}}
+                <div style='margin-bottom: 14px;'>
+                	<i class='close link icon remove-component'></i>
+                	<i class='move link icon move-component'></i>
+                </div>
             {{/if}}
+        	<!-- 	{{> Template.dynamic content=type}} 	-->
+        	<img src='http://i2.kym-cdn.com/photos/images/facebook/000/101/623/are-u-a-WIZARD0.jpg'>
         </div>
     </div>
 </template>

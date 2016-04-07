@@ -12,17 +12,21 @@
 					<input type='email' name='email' placeholder='email...'>
 				</div>
 			{{/if}}
+			<div class='field'>
+				<input type='text' name='{{#if isSignup}}username{{else}}identity{{/if}}' placeholder='username{{#unless isSignup}} or email...{{/unless}}'>
+			</div>
+			{{#if isSignup}}
 			<div class='two fields'>
-				<div class='field'>
-					<input type='text' name='{{#if isSignup}}username{{else}}identity{{/if}}' placeholder='username{{#unless isSignup}} or email...{{/unless}}'>
-				</div>
 				<div class='field'>
 					<input type='password' name='password' placeholder='password...'>
 				</div>
-			</div>
-			{{#if isSignup}}
+					<div class='field'>
+						<input type='password' name='confirm' placeholder='confirm password...'>
+					</div>
+				</div>
+			{{else}}
 				<div class='field'>
-					<input type='password' name='confirm' placeholder='confirm password...'>
+					<input type='password' name='password' placeholder='password...'>
 				</div>
 			{{/if}}
 			<div class='field'>
