@@ -7,26 +7,38 @@
 	</div>
 	<div class='content'>
 		<form class='ui form' id='{{#if isSignup}}signup{{else}}login{{/if}}-form'>
-			{{#if isSignup}}
+			<div class="two fields">
 				<div class='field'>
-					<input type='email' name='email' placeholder='email...'>
+					<input
+						type='{{#if isSignup}}email{{else}}identity{{/if}}'
+						name='{{#if isSignup}}email{{else}}identity{{/if}}'
+						placeholder='{{#unless isSignup}}username or {{/unless}}email...'
+					>
 				</div>
-			{{/if}}
-			<div class='field'>
-				<input type='text' name='{{#if isSignup}}username{{else}}identity{{/if}}' placeholder='username{{#unless isSignup}} or email...{{/unless}}'>
+				<div class='field'>
+					<input
+						type='{{#if isSignup}}username{{else}}password{{/if}}'
+						name='{{#if isSignup}}username{{else}}password{{/if}}'
+						placeholder='{{#if isSignup}}username{{else}}password{{/if}}...'
+					>
+				</div>
 			</div>
 			{{#if isSignup}}
-			<div class='two fields'>
-				<div class='field'>
-					<input type='password' name='password' placeholder='password...'>
-				</div>
+				<div class="two fields">
 					<div class='field'>
-						<input type='password' name='confirm' placeholder='confirm password...'>
+						<input
+							type='password'
+							name='password'
+							placeholder='password'
+						>
 					</div>
-				</div>
-			{{else}}
-				<div class='field'>
-					<input type='password' name='password' placeholder='password...'>
+					<div class='field'>
+						<input
+							type='password'
+							name='confirm'
+							placeholder='confirm password...'
+						>
+					</div>
 				</div>
 			{{/if}}
 			<div class='field'>
