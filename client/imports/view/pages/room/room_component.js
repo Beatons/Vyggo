@@ -6,16 +6,16 @@ const calcMovePos = (startEvent, endEvent, templateInstance) => {
 			boardOffset 		= $('#board').offset(),
 			iconPosition 		= templateInstance.$(startEvent.target).position(),
 			iconDimensions 		= {
-				height:startEvent.target.offsetHeight, 
+				height:startEvent.target.offsetHeight,
 				width:startEvent.target.offsetWidth
 			},
 
-			x = pageX 
-				- boardOffset.left 
+			x = pageX
+				- boardOffset.left
 				- iconPosition.left
 				- iconDimensions.width / 2,
-			y = pageY 
-				- boardOffset.top 
+			y = pageY
+				- boardOffset.top
 				- iconPosition.top
 				- iconDimensions.height / 2
 
@@ -56,7 +56,8 @@ Template.room_component.events({
 		t.state.set('mousedown', true)
 
 		$(document).on('mousemove', ev => {
-			
+			ev.preventDefault()
+
 			const position = calcMovePos(e, ev, t)
 
 			t.state.set('mouseX', position.x)
@@ -76,4 +77,20 @@ Template.room_component.events({
 			$(document).off('mousemove')
 		})
 	},
+
+	'mousedown .resize-component'(e, t) {
+		e.preventDefault()
+
+		//listen fro width
+
+		$(document).on('mousemove', ev => {
+			ev.preventDefault()
+			//set width
+		})
+
+		$(document).one('mouseup', ev => {
+			ev.preventDefault()
+			// stop listen for width
+		})
+	}
 })
