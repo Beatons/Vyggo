@@ -54,10 +54,15 @@ Meteor.methods({
 
 		const component = {
 			_id: Random.id(),
-			x: 0,
-			y: 0,
 			createdAt: Date.now(),
-			createdBy: this.userId
+			createdBy: this.userId,
+			position: {
+				x: 100,
+				y: 100
+			},
+			size: {
+				x: 100
+			}
 		}
 
 		Rooms.update({_id: roomId, createdBy: this.userId}, { $push: { components: component}})
@@ -82,8 +87,24 @@ Meteor.methods({
 			'components._id': componentId
 			}, {
 			$set: {
-				'components.$.x':x,
-				'components.$.y':y
+				'components.$.position.x':x,
+				'components.$.position.y':y
+			}
+		})
+	},
+
+	resizeComponent(roomId, componentId, x) {
+		throwOnserver(!this.userId, 'unauthorized')
+		throwOnserver(!roomId, 'invalid roomId')
+		throwOnserver(!componentId, 'invalid componentId')
+
+		Rooms.update({
+			_id: roomId, 
+			createdBy: this.userId, 
+			'components._id': componentId
+			}, {
+			$set: {
+				'components.$.size.x':x
 			}
 		})
 	}
