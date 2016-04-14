@@ -24,6 +24,7 @@ Template.authModal.helpers({
 Template.authModal.events({
     'click #toggle-isSignup' (e, t) {
         e.preventDefault()
+        $('input').val('')
         Session.set('authModal', undefined)
         t.state.set('isSignup', !t.state.get('isSignup'))
     },
