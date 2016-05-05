@@ -82,8 +82,8 @@ Meteor.methods({
 		throwOnserver(!componentId, 'invalid componentId')
 
 		Rooms.update({
-			_id: roomId, 
-			createdBy: this.userId, 
+			_id: roomId,
+			createdBy: this.userId,
 			'components._id': componentId
 			}, {
 			$set: {
@@ -99,12 +99,28 @@ Meteor.methods({
 		throwOnserver(!componentId, 'invalid componentId')
 
 		Rooms.update({
-			_id: roomId, 
-			createdBy: this.userId, 
+			_id: roomId,
+			createdBy: this.userId,
 			'components._id': componentId
 			}, {
 			$set: {
 				'components.$.size.x':x
+			}
+		})
+	},
+
+	setComponentUrl(roomId, componentId, url){
+		throwOnserver(!this.userId, 'unauthorized')
+		throwOnserver(!roomId, 'invalid roomId')
+		throwOnserver(!componentId, 'invalid componentId')
+
+		Rooms.update({
+			_id: roomId,
+			createdBy: this.userId,
+			'components._id': componentId
+			}, {
+			$set: {
+				'components.$.url':url
 			}
 		})
 	}

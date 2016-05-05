@@ -1,0 +1,24 @@
+.inner-component {
+  padding-bottom: 56.25%; /*16:9*/
+  padding-top: 25px;
+  position: relative;
+}
+
+iframe {
+  width:100%;
+  height:100%;
+}
+
+.twitchPurple {
+  background-color: #6441A5 !important;
+  color: white !important;
+  text-shadow: none;
+  background-image: none;
+}
+
+.youtubeRed {
+  background-color: #E62117 !important;
+  color: white !important;
+  text-shadow: none;
+  background-image: none;
+}

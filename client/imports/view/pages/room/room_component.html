@@ -1,16 +1,21 @@
 <template name='room_component'>
-    <div class='component' id='{{_id}}' style='left:{{position.x}}px; top:{{position.y}}px;'>
-        <div class='ui clearing compact segment'>
-        	{{#if equals createdBy currentUser._id}}
-                <div style='margin-bottom: 14px;'>
-                	<i class='close link icon remove-component'></i>
-                	<i class='move link icon move-component'></i>
-                    <i class='resize horizontal link icon resize-component'></i>
-                </div>
+  <div class='component' id='{{_id}}' style='left:{{position.x}}px; top:{{position.y}}px;'>
+    <div class='ui clearing compact segment'>
+      {{#if equals createdBy currentUser._id}}
+      <div style='margin-bottom: 14px;'>
+        <i class='close link icon remove-component'></i>
+      	<i class='move link icon move-component'></i>
+        <i class='resize horizontal link icon resize-component'></i>
+          </div>
+          {{/if}}
+          <div class='inner-component' style='width:{{size.x}}px;'>
+            {{#if url}}
+            <iframe src={{url}}></iframe>
+            {{else}}
+              {{#if equals createdBy currentUser._id}}
+                {{> room_component_form roomId=roomId _id=_id}}
+              {{/if}}
             {{/if}}
-            <div class='inner-component' style='width:{{size.x}}px;'>
-            	<!-- 	{{> Template.dynamic content=type}} 	-->
-            	<img class='ui fluid image' src='http://i2.kym-cdn.com/photos/images/facebook/000/101/623/are-u-a-WIZARD0.jpg'>
             </div>
         </div>
     </div>

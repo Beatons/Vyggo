@@ -1,0 +1,19 @@
+<template name='room_component_form'>
+  <form id=urlForm class='ui large fluid action input'>
+    <input type='url' name='url' placeholder={{inputStyle.placeholder}}>
+    <select id='urlTemplate' class='ui compact selection dropdown'>
+      <option class='item' value='website' selected=''>
+        Website
+      </option>
+      <option class='item' value='twitch'>
+        Twitch
+      </option>
+      <option class='item' value='youtube'>
+        Youtube
+      </option>
+    </select>
+    <button type='submit' class='ui {{inputStyle.colour}} icon button'>
+      <i class='large {{inputStyle.icon}} icon'></i>
+    </button>
+  </form>
+</template>

@@ -1,5 +1,6 @@
 import './room_component.html'
 import './room_component.css'
+import './room_component/room_component_form.js'
 
 const calcMovePos = (startEvent, endEvent, templateInstance) => {
 	const 	{ pageX, pageY } 	= endEvent,
@@ -117,7 +118,7 @@ Template.room_component.events({
 
 		$(document).on('mousemove', ev => {
 			ev.preventDefault()
-			
+
 			const size = calcSize(e, ev, t)
 
 			t.state.set('size.x', size.x)
@@ -125,7 +126,7 @@ Template.room_component.events({
 
 		$(document).one('mouseup', ev => {
 			ev.preventDefault()
-			
+
 			const 	{ roomId, _id } = t.data,
 			size 		= calcSize(e, ev, t)
 
